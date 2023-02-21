@@ -8,13 +8,13 @@ class GeneralViewSection extends Component {
         <h1>{fullName}</h1>
         <h2>{jobTitle}</h2>
 
-        <p className="label">Email</p>
+        <p className="small">Email</p>
         <p>{email}</p>
 
-        <p className="label">Phone number</p>
+        <p className="small">Phone number</p>
         <p>{phone}</p>
 
-        <p className="label">Address</p>
+        <p className="small">Address</p>
         <p>{address}</p>
       </div>
     );

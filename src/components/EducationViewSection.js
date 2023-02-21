@@ -7,7 +7,7 @@ class EducationViewSection extends Component {
       <div className="view-section">
         <h3>Education</h3>
 
-        <p className="label">{dateOfStudy}</p>
+        <p className="small">{dateOfStudy}</p>
         <p>
           <strong>{schoolName}</strong>
         </p>
