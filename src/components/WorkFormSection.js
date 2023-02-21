@@ -16,6 +16,7 @@ class WorkFormSection extends Component {
             id="company-name"
             placeholder="Facebook"
             value={companyName}
+            onChange={(e) => this.props.handleChange(e, 'work')}
           />
         </div>
 
@@ -26,6 +27,7 @@ class WorkFormSection extends Component {
             id="position-title"
             placeholder="Junior front-end developer"
             value={positionTitle}
+            onChange={(e) => this.props.handleChange(e, 'work')}
           />
         </div>
 
@@ -36,6 +38,7 @@ class WorkFormSection extends Component {
             id="date-of-work"
             placeholder="2022 - 2023"
             value={dateOfWork}
+            onChange={(e) => this.props.handleChange(e, 'work')}
           />
         </div>
 
@@ -48,6 +51,7 @@ class WorkFormSection extends Component {
             id="main-tasks"
             placeholder="Example 1, Example 2, Example 3"
             value={mainTasks}
+            onChange={(e) => this.props.handleChange(e, 'work')}
             rows="3"
           ></textarea>
         </div>

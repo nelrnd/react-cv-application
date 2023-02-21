@@ -15,6 +15,7 @@ class EducationFormSection extends Component {
             id="school-name"
             placeholder="The Odin Project"
             value={schoolName}
+            onChange={(e) => this.props.handleChange(e, 'education')}
           />
         </div>
 
@@ -25,6 +26,7 @@ class EducationFormSection extends Component {
             id="title-of-study"
             placeholder="Full Stack JavaScript"
             value={titleOfStudy}
+            onChange={(e) => this.props.handleChange(e, 'education')}
           />
         </div>
 
@@ -35,6 +37,7 @@ class EducationFormSection extends Component {
             id="date-of-study"
             placeholder="2020 - 2022"
             value={dateOfStudy}
+            onChange={(e) => this.props.handleChange(e, 'education')}
           />
         </div>
       </div>
