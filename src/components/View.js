@@ -7,11 +7,11 @@ class View extends Component {
   render() {
     return (
       <div className="wrapper">
-        <GeneralViewSection data={this.props.general} />
+        <GeneralViewSection data={this.props.data.general} />
         <hr />
-        <EducationViewSection data={this.props.education} />
+        <EducationViewSection data={this.props.data.education} />
         <hr />
-        <WorkViewSection data={this.props.work} />
+        <WorkViewSection data={this.props.data.work} />
       </div>
     );
   }

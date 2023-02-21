@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import GeneralFormSection from './components/GeneralFormSection';
-import EducationFormSection from './components/EducationFormSection';
-import WorkFormSection from './components/WorkFormSection';
-import GeneralViewSection from './components/GeneralViewSection';
-import EducationViewSection from './components/EducationViewSection';
-import WorkViewSection from './components/WorkViewSection';
+import Form from './components/Form';
+import View from './components/View';
 
 class App extends Component {
   constructor(props) {
@@ -45,24 +41,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <GeneralFormSection
-          data={this.state.general}
-          handleChange={this.handleChange}
-        />
-        <EducationFormSection
-          data={this.state.education}
-          handleChange={this.handleChange}
-        />
-        <WorkFormSection
-          data={this.state.work}
-          handleChange={this.handleChange}
-        />
+        <Form data={this.state} />
 
-        <GeneralViewSection data={this.state.general} />
-        <hr />
-        <EducationViewSection data={this.state.education} />
-        <hr />
-        <WorkViewSection data={this.state.work} />
+        <View data={this.state} />
       </div>
     );
   }
