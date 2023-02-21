@@ -7,9 +7,18 @@ class Form extends Component {
   render() {
     return (
       <div className="wrapper">
-        <GeneralFormSection data={this.props.data.general} />
-        <EducationFormSection data={this.props.data.education} />
-        <WorkFormSection data={this.props.data.work} />
+        <GeneralFormSection
+          data={this.props.data.general}
+          handleChange={this.props.handleChange}
+        />
+        <EducationFormSection
+          data={this.props.data.education}
+          handleChange={this.props.handleChange}
+        />
+        <WorkFormSection
+          data={this.props.data.work}
+          handleChange={this.props.handleChange}
+        />
       </div>
     );
   }

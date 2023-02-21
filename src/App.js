@@ -41,7 +41,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form data={this.state} />
+        <Form data={this.state} handleChange={this.handleChange} />
 
         <View data={this.state} />
       </div>
