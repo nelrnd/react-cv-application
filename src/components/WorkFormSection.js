@@ -33,6 +33,7 @@ class WorkFormSection extends Component {
           <textarea
             id="main-tasks"
             placeholder="Example 1, Example 2, Example 3"
+            rows="3"
           ></textarea>
         </div>
       </div>

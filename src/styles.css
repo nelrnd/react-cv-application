@@ -42,10 +42,20 @@ body {
   margin-bottom: 6px;
 }
 
-.form-section input {
+.form-section label .details {
+  color: #aaaaaa;
+}
+
+.form-section input,
+.form-section textarea {
   font-size: 100%;
   width: 100%;
   padding: 12px;
   border: solid 2px #dcdcdc;
   border-radius: 4px;
+}
+
+.form-section textarea {
+  resize: none;
+  line-height: 150%;
 }
