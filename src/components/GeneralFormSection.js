@@ -15,6 +15,7 @@ class GeneralFormSection extends Component {
             id="full-name"
             placeholder="John Doe"
             value={fullName}
+            onChange={(e) => this.props.handleChange(e, 'general')}
           />
         </div>
 
@@ -25,6 +26,7 @@ class GeneralFormSection extends Component {
             id="job-title"
             placeholder="Web developer"
             value={jobTitle}
+            onChange={(e) => this.props.handleChange(e, 'general')}
           />
         </div>
 
@@ -35,16 +37,18 @@ class GeneralFormSection extends Component {
             id="email"
             placeholder="johndoe@example.com"
             value={email}
+            onChange={(e) => this.props.handleChange(e, 'general')}
           />
         </div>
 
         <div>
-          <label htmlFor="phone-number">Phone number</label>
+          <label htmlFor="phone">Phone number</label>
           <input
             type="tel"
-            id="phone-number"
+            id="phone"
             placeholder="754-3010"
             value={phone}
+            onChange={(e) => this.props.handleChange(e, 'general')}
           />
         </div>
 
@@ -55,6 +59,7 @@ class GeneralFormSection extends Component {
             id="address"
             placeholder="92 MACDOUGAL ST NEW YORK NY 10012-2543 USA"
             value={address}
+            onChange={(e) => this.props.handleChange(e, 'general')}
           />
         </div>
       </div>

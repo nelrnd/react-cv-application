@@ -30,10 +30,12 @@ class App extends Component {
   }
 
   handleChange(event, section) {
+    const updatedSection = {
+      ...this.state[section],
+      [convertIdToProp(event.target.id)]: event.target.value,
+    };
     this.setState({
-      [section]: {
-        [convertIdToProp(event.target.id)]: event.target.value,
-      },
+      [section]: updatedSection,
     });
   }
 
@@ -52,8 +54,11 @@ class App extends Component {
           data={this.state.work}
           handleChange={this.handleChange}
         />
-
-        <h2>{this.state.general.fullName}</h2>
+        <p>{this.state.general.fullName}</p>
+        <p>{this.state.general.jobTitle}</p>
+        <p>{this.state.general.email}</p>
+        <p>{this.state.general.phone}</p>
+        <p>{this.state.general.address}</p>
       </div>
     );
   }
