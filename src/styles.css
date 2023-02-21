@@ -79,6 +79,10 @@ body {
   margin: 32px 0;
 }
 
+.view-section > div {
+  margin-bottom: 24px;
+}
+
 .view-section h1 {
   font-size: 32px;
   font-weight: 600;
