@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GeneralFormSection from './components/GeneralFormSection';
 import EducationFormSection from './components/EducationFormSection';
+import WorkFormSection from './components/WorkFormSection';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <div className="App">
         <GeneralFormSection />
         <EducationFormSection />
+        <WorkFormSection />
       </div>
     );
   }
