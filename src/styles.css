@@ -24,3 +24,28 @@ body {
   border-radius: 4px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
+
+.form-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.form-section > div {
+  margin-bottom: 24px;
+}
+
+.form-section label {
+  font-size: 16px;
+  display: block;
+  margin-left: 4px;
+  margin-bottom: 6px;
+}
+
+.form-section input {
+  font-size: 100%;
+  width: 100%;
+  padding: 12px;
+  border: solid 2px #dcdcdc;
+  border-radius: 4px;
+}
