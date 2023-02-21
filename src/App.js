@@ -27,12 +27,13 @@ class App extends Component {
       },
     };
   }
+
   render() {
     return (
       <div className="App">
-        <GeneralFormSection />
-        <EducationFormSection />
-        <WorkFormSection />
+        <GeneralFormSection data={this.state.general} />
+        <EducationFormSection data={this.state.education} />
+        <WorkFormSection data={this.state.work} />
       </div>
     );
   }
