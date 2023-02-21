@@ -26,17 +26,47 @@ class App extends Component {
         mainTasks: '',
       },
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event, section) {
+    this.setState({
+      [section]: {
+        [convertIdToProp(event.target.id)]: event.target.value,
+      },
+    });
   }
 
   render() {
     return (
       <div className="App">
-        <GeneralFormSection data={this.state.general} />
-        <EducationFormSection data={this.state.education} />
-        <WorkFormSection data={this.state.work} />
+        <GeneralFormSection
+          data={this.state.general}
+          handleChange={this.handleChange}
+        />
+        <EducationFormSection
+          data={this.state.education}
+          handleChange={this.handleChange}
+        />
+        <WorkFormSection
+          data={this.state.work}
+          handleChange={this.handleChange}
+        />
+
+        <h2>{this.state.general.fullName}</h2>
       </div>
     );
   }
 }
 
 export default App;
+
+function convertIdToProp(id) {
+  return id.split('-').reduce((prev, curr, id) => {
+    if (id === 0) {
+      return curr;
+    } else {
+      return prev + curr.charAt(0).toUpperCase() + curr.slice(1);
+    }
+  });
+}
