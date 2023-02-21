@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GeneralFormSection from './components/GeneralFormSection';
 import EducationFormSection from './components/EducationFormSection';
 import WorkFormSection from './components/WorkFormSection';
+import GeneralViewSection from './components/GeneralViewSection';
 
 class App extends Component {
   constructor(props) {
@@ -54,11 +55,8 @@ class App extends Component {
           data={this.state.work}
           handleChange={this.handleChange}
         />
-        <p>{this.state.general.fullName}</p>
-        <p>{this.state.general.jobTitle}</p>
-        <p>{this.state.general.email}</p>
-        <p>{this.state.general.phone}</p>
-        <p>{this.state.general.address}</p>
+
+        <GeneralViewSection data={this.state.general} />
       </div>
     );
   }
