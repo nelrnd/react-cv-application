@@ -123,3 +123,48 @@ body {
 hr {
   border: solid 1px #f0f0f0;
 }
+
+button {
+  font-size: 16px;
+  width: 122px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button.primary {
+  color: white;
+  background-color: black;
+}
+
+button.secondary {
+  color: black;
+  background-color: #f0f0f0;
+}
+
+.multi-step-form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.multi-step-form-control .progress-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+.multi-step-form-control .progress-bar .bar {
+  height: 6px;
+  width: 80px;
+  background-color: #f0f0f0;
+}
+
+.multi-step-form-control .progress-bar .bar.filled {
+  background-color: black;
+}

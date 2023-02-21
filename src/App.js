@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MultiStepForm from './components/MultiStepForm';
 import Form from './components/Form';
 import View from './components/View';
 
@@ -41,6 +42,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <MultiStepForm />
+
         <Form data={this.state} handleChange={this.handleChange} />
 
         <View data={this.state} />
