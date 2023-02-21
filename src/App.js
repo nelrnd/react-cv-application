@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import FormGeneralSection from './components/FormGeneralSection';
+import GeneralFormSection from './components/GeneralFormSection';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <FormGeneralSection />
+        <GeneralFormSection />
       </div>
     );
   }

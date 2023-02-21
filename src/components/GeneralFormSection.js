@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class FormGeneralSection extends Component {
+class GeneralFormSection extends Component {
   render() {
     return (
       <div className="form-section">
@@ -39,4 +39,4 @@ class FormGeneralSection extends Component {
   }
 }
 
-export default FormGeneralSection;
+export default GeneralFormSection;
