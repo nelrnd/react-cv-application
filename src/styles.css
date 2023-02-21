@@ -63,3 +63,48 @@ body {
   resize: none;
   line-height: 150%;
 }
+
+.view-section {
+  margin: 32px 0;
+}
+
+.view-section h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.view-section h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #818181;
+  margin-bottom: 32px;
+}
+
+.view-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.view-section p {
+  margin-bottom: 8px;
+}
+
+.view-section .small {
+  font-size: 12px;
+  color: #818181;
+  margin-bottom: 6px;
+}
+
+.view-section ul {
+  padding-left: 1.2rem;
+}
+
+.view-section ul li {
+  margin-bottom: 0.25rem;
+}
+
+hr {
+  border: solid 1px #f0f0f0;
+}

@@ -3,6 +3,8 @@ import GeneralFormSection from './components/GeneralFormSection';
 import EducationFormSection from './components/EducationFormSection';
 import WorkFormSection from './components/WorkFormSection';
 import GeneralViewSection from './components/GeneralViewSection';
+import EducationViewSection from './components/EducationViewSection';
+import WorkViewSection from './components/WorkViewSection';
 
 class App extends Component {
   constructor(props) {
@@ -57,6 +59,10 @@ class App extends Component {
         />
 
         <GeneralViewSection data={this.state.general} />
+        <hr />
+        <EducationViewSection data={this.state.education} />
+        <hr />
+        <WorkViewSection data={this.state.work} />
       </div>
     );
   }
