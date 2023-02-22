@@ -30,7 +30,7 @@ class EducationFormUnit extends Component {
     const { data, index, handleChange } = this.props;
     const { schoolName, titleOfStudy, dateOfStudy } = data;
     return (
-      <div>
+      <div className='unit'>
         <div>
           <label htmlFor={'school-name-' + index}>School name</label>
           <input

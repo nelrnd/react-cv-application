@@ -33,7 +33,7 @@ class WorkFormUnit extends Component {
     const { data, index, handleChange } = this.props;
     const { companyName, positionTitle, dateOfWork, mainTasks } = data;
     return (
-      <div>
+      <div className='unit'>
         <div>
           <label htmlFor={'company-name-' + index}>Company name</label>
           <input

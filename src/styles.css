@@ -50,6 +50,10 @@ body {
   margin-bottom: 24px;
 }
 
+.form-section .unit {
+  margin-bottom: 48px;
+}
+
 .form-section label {
   font-size: 16px;
   display: block;
