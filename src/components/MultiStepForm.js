@@ -14,7 +14,10 @@ class MultiStepForm extends Component {
   render() {
     return (
       <div className="wrapper">
-        <h1>MultiStepForm</h1>
+        <GeneralFormSection
+          data={this.props.data.general}
+          handleChange={this.props.handleChange}
+        />
 
         <div className="multi-step-form-control">
           <button className="secondary">Go back</button>

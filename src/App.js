@@ -42,7 +42,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MultiStepForm />
+        <MultiStepForm data={this.state} handleChange={this.handleChange} />
 
         <Form data={this.state} handleChange={this.handleChange} />
 
