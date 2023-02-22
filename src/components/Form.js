@@ -21,7 +21,7 @@ class Form extends Component {
         />
         <div className='form-control'>
           <div></div>
-          <button className='primary' onClick={() => this.props.changeStage(2)}>
+          <button className='primary' onClick={() => this.props.updateStage(2)}>
             Submit
           </button>
         </div>

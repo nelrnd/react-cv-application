@@ -41,7 +41,7 @@ class EducationFormUnit extends Component {
         </div>
 
         <div>
-          <label htmlFor={'title-of-study'}>Title of study</label>
+          <label htmlFor={'title-of-study-' + index}>Title of study</label>
           <input
             type='text'
             id={'title-of-study-' + index}
