@@ -58,8 +58,12 @@ class App extends Component {
             changeStage={this.changeStage}
           />
         )}
-        {this.state.stage === 2 &&
-          ((<ViewTopBar />), (<View data={this.state} />))}
+        {this.state.stage === 2 && (
+          <>
+            <ViewTopBar />
+            <View data={this.state} />
+          </>
+        )}
         {this.state.stage === 3 && (
           <Form data={this.state} handleChange={this.handleChange} />
         )}

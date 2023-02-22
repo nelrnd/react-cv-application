@@ -58,6 +58,7 @@ class MultiStepForm extends Component {
           step={this.state.step}
           goPrevStep={this.goPrevStep}
           goNextStep={this.goNextStep}
+          changeStage={this.props.changeStage}
         />
       </div>
     );

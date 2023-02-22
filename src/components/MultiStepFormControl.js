@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class MultiStepFormControl extends Component {
   render() {
-    const { goPrevStep, goNextStep, step } = this.props;
+    const { goPrevStep, goNextStep, changeStage, step } = this.props;
     return (
       <div className='multi-step-form-control'>
         <button
@@ -16,7 +16,10 @@ class MultiStepFormControl extends Component {
           <div className={`bar ${step > 1 ? 'filled' : ''}`}></div>
           <div className={`bar ${step > 2 ? 'filled' : ''}`}></div>
         </div>
-        <button className='primary' onClick={goNextStep}>
+        <button
+          className='primary'
+          onClick={step < 3 ? goNextStep : () => changeStage(2)}
+        >
           {step < 3 ? 'Next step' : 'Submit'}
         </button>
       </div>
