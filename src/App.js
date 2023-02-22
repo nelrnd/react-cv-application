@@ -38,6 +38,8 @@ class App extends Component {
     this.addCompany = this.addCompany.bind(this);
     this.removeSchool = this.removeSchool.bind(this);
     this.removeCompany = this.removeCompany.bind(this);
+    this.positionSchool = this.positionSchool.bind(this);
+    this.positionCompany = this.positionCompany.bind(this);
   }
 
   handleChange(event, prop, section, index) {
@@ -119,6 +121,24 @@ class App extends Component {
   removeCompany(index) {
     const newWork = [...this.state.work];
     newWork.splice(index, 1);
+    this.setState({
+      work: newWork,
+    });
+  }
+
+  positionSchool(index, newIndex) {
+    const newEducation = [...this.state.education];
+    const school = newEducation.splice(index, 1)[0];
+    newEducation.splice(newIndex, 0, school);
+    this.setState({
+      education: newEducation,
+    });
+  }
+
+  positionCompany(index, newIndex) {
+    const newWork = [...this.state.work];
+    const company = newWork.splice(index, 1)[0];
+    newWork.splice(newIndex, 0, company);
     this.setState({
       work: newWork,
     });
