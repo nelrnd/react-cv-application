@@ -75,6 +75,8 @@ class App extends Component {
             addCompany={this.addCompany}
             removeSchool={this.removeSchool}
             removeCompany={this.removeCompany}
+            positionSchool={this.positionSchool}
+            positionCompany={this.positionCompany}
           />
         );
       case 2:
@@ -89,6 +91,8 @@ class App extends Component {
             addCompany={this.addCompany}
             removeSchool={this.removeSchool}
             removeCompany={this.removeCompany}
+            positionSchool={this.positionSchool}
+            positionCompany={this.positionCompany}
           />
         );
       default:

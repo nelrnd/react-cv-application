@@ -43,6 +43,7 @@ class MultiStepForm extends Component {
             handleChange={this.props.handleChange}
             addSchool={this.props.addSchool}
             removeSchool={this.props.removeSchool}
+            positionSchool={this.props.positionSchool}
           />
         );
       case 3:
@@ -52,6 +53,7 @@ class MultiStepForm extends Component {
             handleChange={this.props.handleChange}
             addCompany={this.props.addCompany}
             removeCompany={this.props.removeCompany}
+            positionCompany={this.props.positionCompany}
           />
         );
       default:

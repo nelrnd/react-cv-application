@@ -133,6 +133,11 @@ hr {
   border: solid 1px #f0f0f0;
 }
 
+.btn-row {
+  display: flex;
+  gap: 1rem;
+}
+
 button {
   font-size: 16px;
   min-width: 122px;
