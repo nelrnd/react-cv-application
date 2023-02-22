@@ -152,16 +152,20 @@ button.secondary {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
 .multi-step-form-control .progress-bar {
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  flex: 1;
 }
 
 .multi-step-form-control .progress-bar .bar {
   height: 6px;
-  width: 80px;
+  max-width: 80px;
+  flex: 1;
   background-color: #f0f0f0;
   border-radius: 3px;
 }
