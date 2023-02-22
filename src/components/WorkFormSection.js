@@ -19,6 +19,8 @@ class WorkFormSection extends Component {
             />
           );
         })}
+
+        <button className='outline'>Add new work experience</button>
       </div>
     );
   }
