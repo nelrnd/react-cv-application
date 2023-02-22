@@ -153,7 +153,9 @@ button.secondary {
   background-color: #f0f0f0;
 }
 
-.multi-step-form-control {
+.multi-step-form-control,
+.form-control,
+.view-top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
