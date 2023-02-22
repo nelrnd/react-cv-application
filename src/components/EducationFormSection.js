@@ -17,7 +17,7 @@ class EducationFormSection extends Component {
           );
         })}
 
-        <button className='outline center' onClick={this.props.addNewSchool}>
+        <button className='outline center' onClick={this.props.addSchool}>
           Add new education
         </button>
       </div>

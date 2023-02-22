@@ -41,7 +41,7 @@ class MultiStepForm extends Component {
           <EducationFormSection
             data={this.props.data.education}
             handleChange={this.props.handleChange}
-            addNewSchool={this.props.addNewSchool}
+            addSchool={this.props.addSchool}
           />
         );
       case 3:
@@ -49,7 +49,7 @@ class MultiStepForm extends Component {
           <WorkFormSection
             data={this.props.data.work}
             handleChange={this.props.handleChange}
-            addNewCompany={this.props.addNewCompany}
+            addCompany={this.props.addCompany}
           />
         );
       default:

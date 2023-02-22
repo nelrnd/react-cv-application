@@ -34,8 +34,10 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.updateStage = this.updateStage.bind(this);
     this.getCurrentStage = this.getCurrentStage.bind(this);
-    this.addNewSchool = this.addNewSchool.bind(this);
-    this.addNewCompany = this.addNewCompany.bind(this);
+    this.addSchool = this.addSchool.bind(this);
+    this.addCompany = this.addCompany.bind(this);
+    this.removeSchool = this.removeSchool.bind(this);
+    this.removeCompany = this.removeCompany.bind(this);
   }
 
   handleChange(event, prop, section, index) {
@@ -67,8 +69,8 @@ class App extends Component {
             data={this.state}
             handleChange={this.handleChange}
             updateStage={this.updateStage}
-            addNewSchool={this.addNewSchool}
-            addNewCompany={this.addNewCompany}
+            addSchool={this.addSchool}
+            addCompany={this.addCompany}
           />
         );
       case 2:
@@ -79,8 +81,8 @@ class App extends Component {
             data={this.state}
             handleChange={this.handleChange}
             updateStage={this.updateStage}
-            addNewSchool={this.addNewSchool}
-            addNewCompany={this.addNewCompany}
+            addSchool={this.addSchool}
+            addCompany={this.addCompany}
           />
         );
       default:
@@ -88,15 +90,31 @@ class App extends Component {
     }
   }
 
-  addNewSchool() {
+  addSchool() {
     const newEducation = [...this.state.education, { ...schoolModel }];
     this.setState({
       education: newEducation,
     });
   }
 
-  addNewCompany() {
+  addCompany() {
     const newWork = [...this.state.work, { ...companyModel }];
+    this.setState({
+      work: newWork,
+    });
+  }
+
+  removeSchool(index) {
+    const newEducation = [...this.state.education];
+    newEducation.splice(index, 1);
+    this.setState({
+      education: newEducation,
+    });
+  }
+
+  removeCompany(index) {
+    const newWork = [...this.state.work];
+    newWork.splice(index, 1);
     this.setState({
       work: newWork,
     });
