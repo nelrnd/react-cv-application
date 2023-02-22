@@ -17,7 +17,7 @@ class MultiStepFormControl extends Component {
           <div className={`bar ${step > 2 ? 'filled' : ''}`}></div>
         </div>
         <button className='primary' onClick={goNextStep}>
-          Next step
+          {step < 3 ? 'Next step' : 'Submit'}
         </button>
       </div>
     );
