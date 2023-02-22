@@ -20,8 +20,10 @@ class Form extends Component {
           handleChange={this.props.handleChange}
         />
         <div className='form-control'>
-          <button className='secondary'>Cancel</button>
-          <button className='primary'>Submit</button>
+          <div></div>
+          <button className='primary' onClick={() => this.props.changeStage(2)}>
+            Submit
+          </button>
         </div>
       </div>
     );

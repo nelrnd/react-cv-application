@@ -65,7 +65,11 @@ class App extends Component {
           </>
         )}
         {this.state.stage === 3 && (
-          <Form data={this.state} handleChange={this.handleChange} />
+          <Form
+            data={this.state}
+            handleChange={this.handleChange}
+            changeStage={this.changeStage}
+          />
         )}
       </div>
     );
