@@ -7,6 +7,17 @@ import View from './components/View';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.schoolModel = {
+      schoolName: '',
+      titleOfStudy: '',
+      dateOfStudy: '',
+    };
+    this.companyModel = {
+      companyName: '',
+      positionTitle: '',
+      dateOfWork: '',
+      mainTasks: '',
+    };
     this.state = {
       general: {
         fullName: '',
@@ -15,17 +26,43 @@ class App extends Component {
         phone: '',
         address: '',
       },
-      education: {
-        schoolName: '',
-        titleOfStudy: '',
-        dateOfStudy: '',
+      education: [{ ...this.schoolModel }],
+      work: [{ ...this.companyModel }],
+      stage: 1,
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event, prop, section, index) {
+    const newSection =
+      section == 'general'
+        ? { ...this.state.general }
+        : [...this.state[section]];
+    if (index) {
+      newSection[index][prop] = event.target.value;
+    } else {
+      newSection[prop] = event.target.value;
+    }
+    this.setState({
+      [section]: newSection,
+    });
+  }
+}
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      general: {
+        fullName: '',
+        jobTitle: '',
+        email: '',
+        phone: '',
+        address: '',
       },
-      work: {
-        companyName: '',
-        positionTitle: '',
-        dateOfWork: '',
-        mainTasks: '',
-      },
+      education: [{ ...this.educationModel }],
+      work: [{ ...this.workModel }],
       stage: 1,
     };
     this.handleChange = this.handleChange.bind(this);
