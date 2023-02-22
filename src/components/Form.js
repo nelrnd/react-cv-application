@@ -15,11 +15,13 @@ class Form extends Component {
           data={this.props.data.education}
           handleChange={this.props.handleChange}
           addSchool={this.props.addSchool}
+          removeSchool={this.props.removeSchool}
         />
         <WorkFormSection
           data={this.props.data.work}
           handleChange={this.props.handleChange}
           addCompany={this.props.addCompany}
+          removeCompany={this.props.removeCompany}
         />
         <div className='form-control'>
           <div></div>

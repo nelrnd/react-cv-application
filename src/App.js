@@ -71,6 +71,8 @@ class App extends Component {
             updateStage={this.updateStage}
             addSchool={this.addSchool}
             addCompany={this.addCompany}
+            removeSchool={this.removeSchool}
+            removeCompany={this.removeCompany}
           />
         );
       case 2:
@@ -83,6 +85,8 @@ class App extends Component {
             updateStage={this.updateStage}
             addSchool={this.addSchool}
             addCompany={this.addCompany}
+            removeSchool={this.removeSchool}
+            removeCompany={this.removeCompany}
           />
         );
       default:

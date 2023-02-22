@@ -16,6 +16,7 @@ class WorkFormSection extends Component {
               key={index}
               index={index}
               handleChange={this.props.handleChange}
+              removeCompany={this.props.removeCompany}
             />
           );
         })}
@@ -89,7 +90,12 @@ class WorkFormUnit extends Component {
           ></textarea>
         </div>
 
-        <button className='small'>Remove</button>
+        <button
+          className='small'
+          onClick={() => this.props.removeCompany(index)}
+        >
+          Remove
+        </button>
       </div>
     );
   }

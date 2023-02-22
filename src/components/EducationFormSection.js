@@ -13,6 +13,7 @@ class EducationFormSection extends Component {
               key={index}
               index={index}
               handleChange={this.props.handleChange}
+              removeSchool={this.props.removeSchool}
             />
           );
         })}
@@ -70,7 +71,12 @@ class EducationFormUnit extends Component {
           />
         </div>
 
-        <button className='small'>Remove</button>
+        <button
+          className='small'
+          onClick={() => this.props.removeSchool(index)}
+        >
+          Remove
+        </button>
       </div>
     );
   }
