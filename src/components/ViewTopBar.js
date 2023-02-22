@@ -4,7 +4,9 @@ class ViewTopBar extends Component {
   render() {
     return (
       <div className='view-top-bar wrapper'>
-        <button className='secondary'>Edit</button>
+        <button className='secondary' onClick={() => this.props.changeStage(3)}>
+          Edit
+        </button>
         <button className='primary'>Download</button>
       </div>
     );
