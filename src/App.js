@@ -30,6 +30,17 @@ class App extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.changeStage = this.changeStage.bind(this);
+    this.educationModel = {
+      schoolName: '',
+      titleOfStudy: '',
+      dateOfStudy: '',
+    };
+    this.workModel = {
+      companyName: '',
+      positionTitle: '',
+      dateOfWork: '',
+      mainTasks: '',
+    };
   }
 
   handleChange(event, section) {
