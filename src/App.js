@@ -67,6 +67,8 @@ class App extends Component {
             data={this.state}
             handleChange={this.handleChange}
             updateStage={this.updateStage}
+            addNewSchool={this.addNewSchool}
+            addNewCompany={this.addNewCompany}
           />
         );
       case 2:
@@ -77,6 +79,8 @@ class App extends Component {
             data={this.state}
             handleChange={this.handleChange}
             updateStage={this.updateStage}
+            addNewSchool={this.addNewSchool}
+            addNewCompany={this.addNewCompany}
           />
         );
       default:

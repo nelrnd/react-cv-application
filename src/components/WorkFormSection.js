@@ -20,7 +20,9 @@ class WorkFormSection extends Component {
           );
         })}
 
-        <button className='outline center'>Add new work experience</button>
+        <button className='outline center' onClick={this.props.addNewCompany}>
+          Add new work experience
+        </button>
       </div>
     );
   }
