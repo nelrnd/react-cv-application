@@ -12,53 +12,60 @@ class MultiStepForm extends Component {
     };
     this.goPrevStep = this.goPrevStep.bind(this);
     this.goNextStep = this.goNextStep.bind(this);
+    this.getCurrentSection = this.getCurrentSection.bind(this);
   }
 
   goPrevStep() {
-    this.setState((state) => {
-      return { step: state.step - 1 };
+    this.setState({
+      step: this.state.step - 1,
     });
   }
 
   goNextStep() {
-    this.setState((state) => {
-      return { step: state.step + 1 };
+    this.setState({
+      step: this.state.step + 1,
     });
   }
 
-  render() {
-    let currentSection;
-    if (this.state.step === 1)
-      currentSection = (
-        <GeneralFormSection
-          data={this.props.data.general}
-          handleChange={this.props.handleChange}
-        />
-      );
-    if (this.state.step === 2)
-      currentSection = (
-        <EducationFormSection
-          data={this.props.data.education}
-          handleChange={this.props.handleChange}
-        />
-      );
-    if (this.state.step === 3)
-      currentSection = (
-        <WorkFormSection
-          data={this.props.data.work}
-          handleChange={this.props.handleChange}
-        />
-      );
+  getCurrentSection() {
+    switch (this.state.step) {
+      case 1:
+        return (
+          <GeneralFormSection
+            data={this.props.data.general}
+            handleChange={this.props.handleChange}
+          />
+        );
+      case 2:
+        return (
+          <EducationFormSection
+            data={this.props.data.education}
+            handleChange={this.props.handleChange}
+          />
+        );
+      case 3:
+        return (
+          <WorkFormSection
+            data={this.props.data.work}
+            handleChange={this.props.handleChange}
+          />
+        );
+      default:
+        break;
+    }
+  }
 
+  render() {
+    let currentSection = this.getCurrentSection();
     return (
       <div className='wrapper'>
         {currentSection}
 
         <MultiStepFormControl
-          step={this.state.step}
           goPrevStep={this.goPrevStep}
           goNextStep={this.goNextStep}
-          changeStage={this.props.changeStage}
+          updateStage={this.props.updateStage}
+          step={this.state.step}
         />
       </div>
     );

@@ -2,23 +2,25 @@ import React, { Component } from 'react';
 
 class MultiStepFormControl extends Component {
   render() {
-    const { goPrevStep, goNextStep, changeStage, step } = this.props;
+    const { goPrevStep, goNextStep, updateStage, step } = this.props;
     return (
       <div className='multi-step-form-control'>
         <button
-          className={`secondary ${step <= 1 ? 'hidden' : ''}`}
+          className={step <= 1 ? 'hidden secondary' : 'secondary'}
           onClick={goPrevStep}
         >
           Go back
         </button>
+
         <div className='progress-bar'>
-          <div className={`bar ${step > 0 ? 'filled' : ''}`}></div>
-          <div className={`bar ${step > 1 ? 'filled' : ''}`}></div>
-          <div className={`bar ${step > 2 ? 'filled' : ''}`}></div>
+          <div className={step > 0 ? 'bar filled' : 'bar'}></div>
+          <div className={step > 1 ? 'bar filled' : 'bar'}></div>
+          <div className={step > 2 ? 'bar filled' : 'bar'}></div>
         </div>
+
         <button
           className='primary'
-          onClick={step < 3 ? goNextStep : () => changeStage(2)}
+          onClick={step < 3 ? goNextStep : () => updateStage(2)}
         >
           {step < 3 ? 'Next step' : 'Submit'}
         </button>

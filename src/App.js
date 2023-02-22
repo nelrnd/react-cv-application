@@ -34,6 +34,7 @@ class App extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.updateStage = this.updateStage.bind(this);
+    this.getCurrentStage = this.getCurrentStage.bind(this);
   }
 
   handleChange(event, prop, section, index) {
@@ -57,34 +58,33 @@ class App extends Component {
     });
   }
 
+  getCurrentStage() {
+    switch (this.state.stage) {
+      case 1:
+        return (
+          <MultiStepForm
+            data={this.state}
+            handleChange={this.handleChange}
+            updateStage={this.updateStage}
+          />
+        );
+      case 2:
+        return <View data={this.state} updateStage={this.updateStage} />;
+      case 3:
+        return (
+          <Form
+            data={this.state}
+            handleChange={this.handleChange}
+            updateStage={this.updateStage}
+          />
+        );
+      default:
+        break;
+    }
+  }
+
   render() {
-    let currentStage;
-    if (this.state.stage === 0) {
-      currentStage = (
-        <MultiStepForm
-          data={this.state}
-          handleChange={this.handleChange}
-          changeStage={this.changeStage}
-        />
-      );
-    }
-    if (this.state.stage === 1) {
-      currentStage = (
-        <>
-          <ViewTopBar changeStage={this.changeStage} />
-          <View data={this.state} />
-        </>
-      );
-    }
-    if (this.state.stage === 2) {
-      currentStage = (
-        <Form
-          data={this.state}
-          handleChange={this.handleChange}
-          changeStage={this.changeStage}
-        />
-      );
-    }
+    let currentStage = this.getCurrentStage();
     return <div className='App'>{currentStage}</div>;
   }
 }
