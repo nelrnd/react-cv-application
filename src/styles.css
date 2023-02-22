@@ -167,6 +167,12 @@ button.center {
   margin: 0 auto;
 }
 
+button.small {
+  font-size: 14px;
+  padding: 10px 20px;
+  min-width: unset;
+}
+
 .multi-step-form-control,
 .form-control,
 .view-top-bar {

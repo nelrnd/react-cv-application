@@ -69,6 +69,8 @@ class EducationFormUnit extends Component {
             }
           />
         </div>
+
+        <button className='small'>Remove</button>
       </div>
     );
   }

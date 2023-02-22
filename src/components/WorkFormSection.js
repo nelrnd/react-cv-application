@@ -88,6 +88,8 @@ class WorkFormUnit extends Component {
             }
           ></textarea>
         </div>
+
+        <button className='small'>Remove</button>
       </div>
     );
   }
