@@ -17,7 +17,7 @@ class EducationFormSection extends Component {
           );
         })}
 
-        <button className='outline'>Add new education</button>
+        <button className='outline center'>Add new education</button>
       </div>
     );
   }
