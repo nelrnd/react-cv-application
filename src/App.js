@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MultiStepForm from './components/MultiStepForm';
 import Form from './components/Form';
+import ViewTopBar from './components/ViewTopBar';
 import View from './components/View';
 
 class App extends Component {
@@ -25,8 +26,10 @@ class App extends Component {
         dateOfWork: '',
         mainTasks: '',
       },
+      stage: 1,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.changeStage = this.changeStage.bind(this);
   }
 
   handleChange(event, section) {
@@ -39,14 +42,27 @@ class App extends Component {
     });
   }
 
+  changeStage(nb) {
+    this.setState({
+      stage: nb,
+    });
+  }
+
   render() {
     return (
       <div className='App'>
-        <MultiStepForm data={this.state} handleChange={this.handleChange} />
-
-        <Form data={this.state} handleChange={this.handleChange} />
-
-        <View data={this.state} />
+        {this.state.stage === 1 && (
+          <MultiStepForm
+            data={this.state}
+            handleChange={this.handleChange}
+            changeStage={this.changeStage}
+          />
+        )}
+        {this.state.stage === 2 &&
+          ((<ViewTopBar />), (<View data={this.state} />))}
+        {this.state.stage === 3 && (
+          <Form data={this.state} handleChange={this.handleChange} />
+        )}
       </div>
     );
   }
