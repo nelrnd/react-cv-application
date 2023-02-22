@@ -34,6 +34,8 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.updateStage = this.updateStage.bind(this);
     this.getCurrentStage = this.getCurrentStage.bind(this);
+    this.addNewSchool = this.addNewSchool.bind(this);
+    this.addNewCompany = this.addNewCompany.bind(this);
   }
 
   handleChange(event, prop, section, index) {
@@ -80,6 +82,20 @@ class App extends Component {
       default:
         break;
     }
+  }
+
+  addNewSchool() {
+    const newEducation = [...this.state.education, { ...schoolModel }];
+    this.setState({
+      education: newEducation,
+    });
+  }
+
+  addNewCompany() {
+    const newWork = [...this.state.work, { ...companyModel }];
+    this.setState({
+      work: newWork,
+    });
   }
 
   render() {
