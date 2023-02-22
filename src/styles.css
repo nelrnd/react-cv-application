@@ -173,3 +173,7 @@ button.secondary {
 .multi-step-form-control .progress-bar .bar.filled {
   background-color: black;
 }
+
+.hidden {
+  visibility: hidden;
+}
