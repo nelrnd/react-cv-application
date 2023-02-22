@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MultiStepForm from './components/MultiStepForm';
 import Form from './components/Form';
-import ViewTopBar from './components/ViewTopBar';
 import View from './components/View';
 
 const schoolModel = {
@@ -42,7 +41,7 @@ class App extends Component {
       section == 'general'
         ? { ...this.state.general }
         : [...this.state[section]];
-    if (index) {
+    if (index !== undefined) {
       newSection[index][prop] = event.target.value;
     } else {
       newSection[prop] = event.target.value;

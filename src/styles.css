@@ -46,7 +46,7 @@ body {
   margin-bottom: 24px;
 }
 
-.form-section > div {
+.form-section > div > div {
   margin-bottom: 24px;
 }
 
