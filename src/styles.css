@@ -93,6 +93,26 @@ body {
   line-height: 150%;
 }
 
+.form-section input[type='file'] {
+  display: none;
+}
+
+.form-section input[type='file'] + label {
+  font-size: 16px;
+  padding: 12px;
+  border: solid 2px #dcdcdc;
+  border-radius: 4px;
+  margin-left: unset;
+  margin-right: 12px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.form-section input[type='file'] + label + span {
+  font-size: 14px;
+  color: #818181;
+}
+
 .view-section {
   margin: 32px 0;
 }

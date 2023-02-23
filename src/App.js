@@ -28,6 +28,7 @@ class App extends Component {
         location: '',
         profile: '',
         photoUrl: '',
+        photoName: '',
       },
       education: [{ ...schoolModel }],
       work: [{ ...companyModel }],
@@ -65,6 +66,7 @@ class App extends Component {
     if (file) {
       const newGeneral = { ...this.state.general };
       newGeneral.photoUrl = URL.createObjectURL(file);
+      newGeneral.photoName = file.name;
       this.setState({
         general: newGeneral,
       });

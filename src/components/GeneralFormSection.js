@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class GeneralFormSection extends Component {
   render() {
     const { handleChange, handlePhotoUpload, data } = this.props;
-    const { fullName, jobTitle, email, phone, location, profile } = data;
+    const { fullName, jobTitle, email, phone, location, profile, photoName } =
+      data;
 
     return (
       <div className="form-section">
@@ -83,6 +84,8 @@ class GeneralFormSection extends Component {
             id="photo"
             onChange={handlePhotoUpload}
           />
+          <label htmlFor="photo">Browse...</label>
+          <span>{photoName}</span>
         </div>
       </div>
     );
