@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 
 class GeneralViewSection extends Component {
   render() {
-    const { fullName, jobTitle, email, phone, location, profile } =
+    const { fullName, jobTitle, email, phone, location, profile, photoUrl } =
       this.props.data;
     return (
       <div className="view-section">
         <h1>{fullName}</h1>
         <h2>{jobTitle}</h2>
+
+        <div>
+          <img src={photoUrl} alt="Avatar" />
+        </div>
 
         <div>
           <p className="small">Email</p>

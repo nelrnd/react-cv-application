@@ -27,12 +27,14 @@ class App extends Component {
         phone: '',
         location: '',
         profile: '',
+        photoUrl: '',
       },
       education: [{ ...schoolModel }],
       work: [{ ...companyModel }],
       stage: 1,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handlePhotoUpload = this.handlePhotoUpload.bind(this);
     this.updateStage = this.updateStage.bind(this);
     this.getCurrentStage = this.getCurrentStage.bind(this);
     this.addSchool = this.addSchool.bind(this);
@@ -58,6 +60,17 @@ class App extends Component {
     });
   }
 
+  handlePhotoUpload(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const newGeneral = { ...this.state.general };
+      newGeneral.photoUrl = URL.createObjectURL(file);
+      this.setState({
+        general: newGeneral,
+      });
+    }
+  }
+
   updateStage(number) {
     this.setState({
       stage: number,
@@ -71,6 +84,7 @@ class App extends Component {
           <MultiStepForm
             data={this.state}
             handleChange={this.handleChange}
+            handlePhotoUpload={this.handlePhotoUpload}
             updateStage={this.updateStage}
             addSchool={this.addSchool}
             addCompany={this.addCompany}
@@ -87,6 +101,7 @@ class App extends Component {
           <Form
             data={this.state}
             handleChange={this.handleChange}
+            handlePhotoUpload={this.handlePhotoUpload}
             updateStage={this.updateStage}
             addSchool={this.addSchool}
             addCompany={this.addCompany}

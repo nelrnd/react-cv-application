@@ -6,10 +6,11 @@ import WorkFormSection from './WorkFormSection';
 class Form extends Component {
   render() {
     return (
-      <div className='wrapper'>
+      <div className="wrapper">
         <GeneralFormSection
           data={this.props.data.general}
           handleChange={this.props.handleChange}
+          handlePhotoUpload={this.props.handlePhotoUpload}
         />
         <EducationFormSection
           data={this.props.data.education}
@@ -25,9 +26,9 @@ class Form extends Component {
           removeCompany={this.props.removeCompany}
           positionCompany={this.props.positionCompany}
         />
-        <div className='form-control'>
+        <div className="form-control">
           <div></div>
-          <button className='primary' onClick={() => this.props.updateStage(2)}>
+          <button className="primary" onClick={() => this.props.updateStage(2)}>
             Submit
           </button>
         </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class GeneralFormSection extends Component {
   render() {
-    const { handleChange, data } = this.props;
+    const { handleChange, handlePhotoUpload, data } = this.props;
     const { fullName, jobTitle, email, phone, location, profile } = data;
 
     return (
@@ -73,6 +73,16 @@ class GeneralFormSection extends Component {
             value={profile}
             onChange={(event) => handleChange(event, 'profile', 'general')}
           ></textarea>
+        </div>
+
+        <div>
+          <label htmlFor="photo">Photo</label>
+          <input
+            type="file"
+            accept="image/*"
+            id="photo"
+            onChange={handlePhotoUpload}
+          />
         </div>
       </div>
     );

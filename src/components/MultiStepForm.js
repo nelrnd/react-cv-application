@@ -34,6 +34,7 @@ class MultiStepForm extends Component {
           <GeneralFormSection
             data={this.props.data.general}
             handleChange={this.props.handleChange}
+            handlePhotoUpload={this.props.handlePhotoUpload}
           />
         );
       case 2:
@@ -64,7 +65,7 @@ class MultiStepForm extends Component {
   render() {
     let currentSection = this.getCurrentSection();
     return (
-      <div className='wrapper'>
+      <div className="wrapper">
         {currentSection}
 
         <MultiStepFormControl
