@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class WorkFormSection extends Component {
+class FormWorkSection extends Component {
   render() {
     return (
       <div className="form-section">
@@ -8,7 +8,7 @@ class WorkFormSection extends Component {
 
         {this.props.data.map((item, index) => {
           return (
-            <WorkFormUnit
+            <FormWorkUnit
               data={item}
               key={index}
               index={index}
@@ -27,7 +27,7 @@ class WorkFormSection extends Component {
   }
 }
 
-class WorkFormUnit extends Component {
+class FormWorkUnit extends Component {
   render() {
     const { data, index, handleChange } = this.props;
     const { companyName, positionTitle, dateOfWork, mainTasks } = data;
@@ -115,4 +115,4 @@ class WorkFormUnit extends Component {
   }
 }
 
-export default WorkFormSection;
+export default FormWorkSection;

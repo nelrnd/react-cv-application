@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import MultiStepFormControl from './MultiStepFormControl';
-import GeneralFormSection from './GeneralFormSection';
-import EducationFormSection from './EducationFormSection';
-import WorkFormSection from './WorkFormSection';
+import GeneralFormSection from './FormGeneralSection';
+import EducationFormSection from './FormEducationSection';
+import WorkFormSection from './FormWorkSection';
 
 class MultiStepForm extends Component {
   constructor(props) {

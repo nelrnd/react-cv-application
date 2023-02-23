@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class GeneralFormSection extends Component {
+class FormGeneralSection extends Component {
   render() {
     const { handleChange, handlePhotoUpload, data } = this.props;
     const { fullName, jobTitle, email, phone, location, profile, photoName } =
@@ -92,4 +92,4 @@ class GeneralFormSection extends Component {
   }
 }
 
-export default GeneralFormSection;
+export default FormGeneralSection;

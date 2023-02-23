@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class EducationFormSection extends Component {
+class FormEducationSection extends Component {
   render() {
     return (
-      <div className='form-section'>
+      <div className="form-section">
         <h2>Education</h2>
 
         {this.props.data.map((item, index) => {
           return (
-            <EducationFormUnit
+            <FormEducationUnit
               data={item}
               key={index}
               index={index}
@@ -19,7 +19,7 @@ class EducationFormSection extends Component {
           );
         })}
 
-        <button className='outline center' onClick={this.props.addSchool}>
+        <button className="outline center" onClick={this.props.addSchool}>
           Add new education
         </button>
       </div>
@@ -27,18 +27,18 @@ class EducationFormSection extends Component {
   }
 }
 
-class EducationFormUnit extends Component {
+class FormEducationUnit extends Component {
   render() {
     const { data, index, handleChange } = this.props;
     const { schoolName, titleOfStudy, dateOfStudy } = data;
     return (
-      <div className='unit'>
+      <div className="unit">
         <div>
           <label htmlFor={'school-name-' + index}>School name</label>
           <input
-            type='text'
+            type="text"
             id={'school-name-' + index}
-            placeholder='The Odin Project'
+            placeholder="The Odin Project"
             value={schoolName}
             onChange={(event) =>
               handleChange(event, 'schoolName', 'education', index)
@@ -49,9 +49,9 @@ class EducationFormUnit extends Component {
         <div>
           <label htmlFor={'title-of-study-' + index}>Title of study</label>
           <input
-            type='text'
+            type="text"
             id={'title-of-study-' + index}
-            placeholder='Full Stack JavaScript'
+            placeholder="Full Stack JavaScript"
             value={titleOfStudy}
             onChange={(event) =>
               handleChange(event, 'titleOfStudy', 'education', index)
@@ -62,9 +62,9 @@ class EducationFormUnit extends Component {
         <div>
           <label htmlFor={'date-of-study-' + index}>Date of study</label>
           <input
-            type='text'
+            type="text"
             id={'date-of-study-' + index}
-            placeholder='2020 - 2022'
+            placeholder="2020 - 2022"
             value={dateOfStudy}
             onChange={(event) =>
               handleChange(event, 'dateOfStudy', 'education', index)
@@ -72,23 +72,23 @@ class EducationFormUnit extends Component {
           />
         </div>
 
-        <div className='btn-row'>
+        <div className="btn-row">
           <button
-            className='small'
+            className="small"
             onClick={() => this.props.removeSchool(index)}
           >
             Remove
           </button>
 
           <button
-            className='small'
+            className="small"
             onClick={() => this.props.positionSchool(index, index - 1)}
           >
             ▲ Go up
           </button>
 
           <button
-            className='small'
+            className="small"
             onClick={() => this.props.positionSchool(index, index + 1)}
           >
             ▼ Go down
@@ -99,4 +99,4 @@ class EducationFormUnit extends Component {
   }
 }
 
-export default EducationFormSection;
+export default FormEducationSection;
