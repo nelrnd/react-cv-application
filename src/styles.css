@@ -122,6 +122,7 @@ body {
   aspect-ratio: 1 / 1.414;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
   padding: unset;
 }
 
@@ -143,6 +144,29 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.view-header {
+  margin: 4rem 0;
+  padding: 40px;
+  height: 170px;
+  background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.view-header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+.view-header h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #a4abeb;
 }
 
 .view-section {

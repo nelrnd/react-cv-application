@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ViewTopBar from './ViewTopBar';
-import GeneralViewSection from './GeneralViewSection';
-import EducationViewSection from './EducationViewSection';
-import WorkViewSection from './WorkViewSection';
+import ViewProfileSection from './ViewProfileSection';
+import ViewEducationSection from './ViewEducationSection';
+import ViewWorkSection from './ViewWorkSection';
 
 class View extends Component {
   render() {
@@ -12,11 +12,11 @@ class View extends Component {
 
         <div className="wrapper large view">
           <ViewBar data={this.props.data.general} />
-          <GeneralViewSection data={this.props.data.general} />
-          <hr />
-          <EducationViewSection data={this.props.data.education} />
-          <hr />
-          <WorkViewSection data={this.props.data.work} />
+          <ViewHeader
+            fullName={this.props.data.general.fullName}
+            jobTitle={this.props.data.general.jobTitle}
+          />
+          <ViewMain data={this.props.data} />
         </div>
       </>
     );
@@ -48,6 +48,31 @@ class ViewBar extends Component {
             <p>{location}</p>
           </div>
         </div>
+      </div>
+    );
+  }
+}
+
+class ViewHeader extends Component {
+  render() {
+    return (
+      <header className="view-header">
+        <h1>{this.props.fullName}</h1>
+        <h2>{this.props.jobTitle}</h2>
+      </header>
+    );
+  }
+}
+
+class ViewMain extends Component {
+  render() {
+    return (
+      <div>
+        <ViewProfileSection data={this.props.data.general.profile} />
+        <hr />
+        <ViewEducationSection data={this.props.data.education} />
+        <hr />
+        <ViewWorkSection data={this.props.data.work} />
       </div>
     );
   }
