@@ -44,7 +44,7 @@ class App extends Component {
 
   handleChange(event, prop, section, index) {
     const newSection =
-      section == 'general'
+      section === 'general'
         ? { ...this.state.general }
         : [...this.state[section]];
     if (index !== undefined) {
@@ -150,7 +150,7 @@ class App extends Component {
 
   render() {
     let currentStage = this.getCurrentStage();
-    return <div className='App'>{currentStage}</div>;
+    return <div className="App">{currentStage}</div>;
   }
 }
 
