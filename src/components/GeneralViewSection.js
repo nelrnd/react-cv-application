@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class GeneralViewSection extends Component {
   render() {
-    const { fullName, jobTitle, email, phone, location } = this.props.data;
+    const { fullName, jobTitle, email, phone, location, profile } =
+      this.props.data;
     return (
       <div className="view-section">
         <h1>{fullName}</h1>
@@ -21,6 +22,11 @@ class GeneralViewSection extends Component {
         <div>
           <p className="small">Location</p>
           <p>{location}</p>
+        </div>
+
+        <div>
+          <p className="small">Profile</p>
+          <p>{profile}</p>
         </div>
       </div>
     );

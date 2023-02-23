@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class GeneralFormSection extends Component {
   render() {
     const { handleChange, data } = this.props;
-    const { fullName, jobTitle, email, phone, location } = data;
+    const { fullName, jobTitle, email, phone, location, profile } = data;
 
     return (
       <div className="form-section">
@@ -62,6 +62,17 @@ class GeneralFormSection extends Component {
             value={location}
             onChange={(event) => handleChange(event, 'location', 'general')}
           />
+        </div>
+
+        <div>
+          <label htmlFor="profile">Profile</label>
+          <textarea
+            rows="3"
+            id="profile"
+            placeholder="A few sentences about you"
+            value={profile}
+            onChange={(event) => handleChange(event, 'profile', 'general')}
+          ></textarea>
         </div>
       </div>
     );

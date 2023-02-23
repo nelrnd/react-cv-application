@@ -26,6 +26,7 @@ class App extends Component {
         email: '',
         phone: '',
         location: '',
+        profile: '',
       },
       education: [{ ...schoolModel }],
       work: [{ ...companyModel }],
