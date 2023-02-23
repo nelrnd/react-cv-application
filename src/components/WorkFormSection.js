@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 
 class WorkFormSection extends Component {
   render() {
-    const { companyName, positionTitle, dateOfWork, mainTasks } =
-      this.props.data;
-
     return (
-      <div className='form-section'>
+      <div className="form-section">
         <h2>Work experience</h2>
 
         {this.props.data.map((item, index) => {
@@ -22,7 +19,7 @@ class WorkFormSection extends Component {
           );
         })}
 
-        <button className='outline center' onClick={this.props.addCompany}>
+        <button className="outline center" onClick={this.props.addCompany}>
           Add new work experience
         </button>
       </div>
@@ -35,13 +32,13 @@ class WorkFormUnit extends Component {
     const { data, index, handleChange } = this.props;
     const { companyName, positionTitle, dateOfWork, mainTasks } = data;
     return (
-      <div className='unit'>
+      <div className="unit">
         <div>
           <label htmlFor={'company-name-' + index}>Company name</label>
           <input
-            type='text'
+            type="text"
             id={'company-name-' + index}
-            placeholder='Facebook'
+            placeholder="Facebook"
             value={companyName}
             onChange={(event) =>
               handleChange(event, 'companyName', 'work', index)
@@ -52,9 +49,9 @@ class WorkFormUnit extends Component {
         <div>
           <label htmlFor={'position-title-' + index}>Position title</label>
           <input
-            type='text'
+            type="text"
             id={'position-title-' + index}
-            placeholder='Junior front-end developer'
+            placeholder="Junior front-end developer"
             value={positionTitle}
             onChange={(event) =>
               handleChange(event, 'positionTitle', 'work', index)
@@ -65,9 +62,9 @@ class WorkFormUnit extends Component {
         <div>
           <label htmlFor={'date-of-work-' + index}>Date of work</label>
           <input
-            type='text'
+            type="text"
             id={'date-of-work-' + index}
-            placeholder='2022 - 2023'
+            placeholder="2022 - 2023"
             value={dateOfWork}
             onChange={(event) =>
               handleChange(event, 'dateOfWork', 'work', index)
@@ -78,12 +75,12 @@ class WorkFormUnit extends Component {
         <div>
           <label htmlFor={'main-tasks-' + index}>
             Main tasks/achievements
-            <span className='details'> (separated by commas)</span>
+            <span className="details"> (separated by commas)</span>
           </label>
           <textarea
-            rows='3'
+            rows="3"
             id={'main-tasks-' + index}
-            placeholder='Example 1, Example 2, Example 3'
+            placeholder="Example 1, Example 2, Example 3"
             value={mainTasks}
             onChange={(event) =>
               handleChange(event, 'mainTasks', 'work', index)
@@ -91,23 +88,23 @@ class WorkFormUnit extends Component {
           ></textarea>
         </div>
 
-        <div className='btn-row'>
+        <div className="btn-row">
           <button
-            className='small'
+            className="small"
             onClick={() => this.props.removeCompany(index)}
           >
             Remove
           </button>
 
           <button
-            className='small'
+            className="small"
             onClick={() => this.props.positionCompany(index, index - 1)}
           >
             ▲ Go up
           </button>
 
           <button
-            className='small'
+            className="small"
             onClick={() => this.props.positionCompany(index, index + 1)}
           >
             ▼ Go down
