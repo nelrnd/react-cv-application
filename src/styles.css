@@ -177,7 +177,7 @@ body {
   margin: 32px 0;
 }
 
-.view div {
+.view > div div {
   margin-bottom: 24px;
 }
 
@@ -189,6 +189,7 @@ body {
 
 .view p {
   margin-bottom: 8px;
+  line-height: 150%;
 }
 
 .view .small {
