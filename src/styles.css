@@ -2,6 +2,7 @@
 
 :root {
   --main: #3c4ce3;
+  --light: #e9e9f0;
 }
 
 * {
@@ -22,7 +23,6 @@ body {
 }
 
 .App {
-  max-width: 730px;
   min-height: 100%;
   margin: auto;
   display: flex;
@@ -32,6 +32,7 @@ body {
 }
 
 .wrapper {
+  max-width: 730px;
   width: 100%;
   margin: 1rem 0;
   padding: 20px 20px 32px;
@@ -111,6 +112,37 @@ body {
 .form-section input[type='file'] + label + span {
   font-size: 14px;
   color: #818181;
+}
+
+.large {
+  max-width: 926px;
+}
+
+.view {
+  aspect-ratio: 1 / 1.414;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: unset;
+}
+
+.view-bar {
+  background-color: var(--light);
+  grid-row-start: 1;
+  grid-row-end: 3;
+  padding: 40px;
+}
+
+.view-bar .photo-wrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.view-bar .photo-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .view-section {

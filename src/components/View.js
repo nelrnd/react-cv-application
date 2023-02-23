@@ -10,7 +10,8 @@ class View extends Component {
       <>
         <ViewTopBar updateStage={this.props.updateStage} />
 
-        <div className='wrapper'>
+        <div className="wrapper large view">
+          <ViewBar data={this.props.data.general} />
           <GeneralViewSection data={this.props.data.general} />
           <hr />
           <EducationViewSection data={this.props.data.education} />
@@ -18,6 +19,36 @@ class View extends Component {
           <WorkViewSection data={this.props.data.work} />
         </div>
       </>
+    );
+  }
+}
+
+class ViewBar extends Component {
+  render() {
+    const { email, phone, location, photoUrl } = this.props.data;
+    return (
+      <div className="view-bar">
+        <div className="photo-wrapper">
+          <img src={photoUrl} alt="avatar"></img>
+        </div>
+
+        <div className="contact-wrapper">
+          <div>
+            <p className="small">Email</p>
+            <p>{email}</p>
+          </div>
+
+          <div>
+            <p className="small">Phone number</p>
+            <p>{phone}</p>
+          </div>
+
+          <div>
+            <p className="small">Location</p>
+            <p>{location}</p>
+          </div>
+        </div>
+      </div>
     );
   }
 }
