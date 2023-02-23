@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 
-class EducationViewSection extends Component {
+class ViewEducationSection extends Component {
   render() {
     return (
-      <div className='view-section'>
+      <div className="view-section">
         <h3>Education</h3>
 
-        {this.props.data.map((item, index) => (
-          <EducationViewUnit data={item} key={index} />
+        {this.props.education.map((item, index) => (
+          <ViewEducationUnit data={item} key={index} />
         ))}
       </div>
     );
   }
 }
 
-class EducationViewUnit extends Component {
+class ViewEducationUnit extends Component {
   render() {
     const { schoolName, titleOfStudy, dateOfStudy } = this.props.data;
     return (
       <div>
-        <p className='small'>{dateOfStudy}</p>
+        <p className="small">{dateOfStudy}</p>
         <p>
           <strong>{schoolName}</strong>
         </p>
@@ -29,4 +29,4 @@ class EducationViewUnit extends Component {
   }
 }
 
-export default EducationViewSection;
+export default ViewEducationSection;

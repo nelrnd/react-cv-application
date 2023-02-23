@@ -67,12 +67,12 @@ class ViewHeader extends Component {
 class ViewMain extends Component {
   render() {
     return (
-      <div>
-        <ViewProfileSection data={this.props.data.general.profile} />
+      <div className="view-main">
+        <ViewProfileSection profile={this.props.data.general.profile} />
         <hr />
-        <ViewEducationSection data={this.props.data.education} />
+        <ViewEducationSection education={this.props.data.education} />
         <hr />
-        <ViewWorkSection data={this.props.data.work} />
+        <ViewWorkSection work={this.props.data.work} />
       </div>
     );
   }
