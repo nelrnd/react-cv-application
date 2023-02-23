@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+:root {
+  --main: #3c4ce3;
+}
+
 * {
   font-family: 'Inter', Arial, sans-serif;
   padding: 0;
@@ -72,6 +76,11 @@ body {
   padding: 12px;
   border: solid 2px #dcdcdc;
   border-radius: 4px;
+}
+
+.form-section input,
+.form-section textarea {
+  outline-color: var(--main);
 }
 
 .form-section input::placeholder,
@@ -154,7 +163,7 @@ button:hover {
 
 button.primary {
   color: white;
-  background-color: black;
+  background-color: var(--main);
 }
 
 button.secondary {
@@ -203,7 +212,7 @@ button.small {
 }
 
 .multi-step-form-control .progress-bar .bar.filled {
-  background-color: black;
+  background-color: var(--main);
 }
 
 .hidden {
