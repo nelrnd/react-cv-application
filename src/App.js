@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import MultiStepForm from './components/MultiStepForm';
 import Form from './components/Form';
 import View from './components/View';
+import { PDFViewer } from '@react-pdf/renderer';
+import CVDocument from './components/CVDocument';
 
 const schoolModel = {
   schoolName: '',
@@ -216,7 +218,18 @@ class App extends Component {
 
   render() {
     let currentStage = this.getCurrentStage();
-    return <div className="App">{currentStage}</div>;
+    return (
+      <div className="App">
+        {currentStage}
+        <PDFViewer className="pdf-viewer">
+          <CVDocument
+            general={this.state.general}
+            education={this.state.education}
+            work={this.state.work}
+          />
+        </PDFViewer>
+      </div>
+    );
   }
 }
 
