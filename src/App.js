@@ -16,6 +16,48 @@ const companyModel = {
   mainTasks: '',
 };
 
+const filledState = {
+  general: {
+    fullName: 'John Doe',
+    jobTitle: 'Web Developer',
+    email: 'johndoe@example.com',
+    phone: '+63 1234 4231',
+    location: 'New York, USA',
+    profile:
+      'Lorem ipsum dolor sit amet consectetur. Ut eget non arcu massa iaculis pharetra consectetur gravida. Gravida neque a sollicitudin purus cursus ornare aliquet. Odio quis commodo eu risus morbi sit.',
+    photoUrl:
+      'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  },
+  education: [
+    {
+      schoolName: 'Google',
+      titleOfStudy: 'UX Design Certificate',
+      dateOfStudy: '2021',
+    },
+    {
+      schoolName: 'The Odin Project',
+      titleOfStudy: 'Full Stack JavaScript',
+      dateOfStudy: '2022 - 2023',
+    },
+  ],
+  work: [
+    {
+      companyName: 'Wahoo',
+      positionTitle: 'Junior front-end developer',
+      dateOfWork: '2015 - 2017',
+      mainTasks:
+        'Created highly interactive websites, Collaborated with awesome designers, Helped to increase customer base by 40% in 3 months',
+    },
+    {
+      companyName: 'Facebook',
+      positionTitle: 'Senior full-stack developer',
+      dateOfWork: '2017 - now',
+      mainTasks:
+        'Created highly interactive websites, Collaborated with awesome designers, Helped to increase customer base by 40% in 3 months',
+    },
+  ],
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +74,7 @@ class App extends Component {
       },
       education: [{ ...schoolModel }],
       work: [{ ...companyModel }],
-      stage: 1,
+      stage: 2,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handlePhotoUpload = this.handlePhotoUpload.bind(this);
@@ -44,6 +86,12 @@ class App extends Component {
     this.removeCompany = this.removeCompany.bind(this);
     this.positionSchool = this.positionSchool.bind(this);
     this.positionCompany = this.positionCompany.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      ...filledState,
+    });
   }
 
   handleChange(event, prop, section, index) {
