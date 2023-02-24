@@ -6,13 +6,22 @@ import {
   View,
   Document,
   StyleSheet,
+  Font,
 } from '@react-pdf/renderer';
+import InterRegular from '../assets/Inter-Regular.ttf';
+import InterSemiBold from '../assets/Inter-SemiBold.ttf';
+
+Font.register({
+  family: 'Inter',
+  fonts: [{ src: InterRegular }, { src: InterSemiBold, fontWeight: 600 }],
+});
 
 const styles = StyleSheet.create({
   page: {
     display: 'flex',
     flexDirection: 'row',
     backgroundColor: 'white',
+    fontFamily: 'Inter',
   },
   bar: {
     flex: 1,
@@ -37,6 +46,10 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 11,
     lineHeight: 1.5,
+    fontFamily: 'Inter',
+  },
+  bold: {
+    fontWeight: 600,
   },
   main: {
     flex: 2,
