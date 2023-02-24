@@ -7,7 +7,7 @@ class ViewTopBar extends Component {
         <button className="secondary" onClick={() => this.props.updateStage(3)}>
           Edit
         </button>
-        <button className="primary">Download</button>
+        <button className="primary">Download PDF</button>
       </div>
     );
   }
