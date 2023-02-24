@@ -149,6 +149,10 @@ class App extends Component {
       case 1:
         return (
           <>
+            <InfoControl
+              fillState={this.fillState}
+              clearState={this.clearState}
+            />
             <MultiStepForm
               data={this.state}
               handleChange={this.handleChange}
@@ -161,10 +165,6 @@ class App extends Component {
               positionSchool={this.positionSchool}
               positionCompany={this.positionCompany}
             />
-            <InfoControl
-              fillState={this.fillState}
-              clearState={this.clearState}
-            />
           </>
         );
       case 2:
@@ -172,6 +172,10 @@ class App extends Component {
       case 3:
         return (
           <>
+            <InfoControl
+              fillState={this.fillState}
+              clearState={this.clearState}
+            />
             <Form
               data={this.state}
               handleChange={this.handleChange}
@@ -183,10 +187,6 @@ class App extends Component {
               removeCompany={this.removeCompany}
               positionSchool={this.positionSchool}
               positionCompany={this.positionCompany}
-            />
-            <InfoControl
-              fillState={this.fillState}
-              clearState={this.clearState}
             />
           </>
         );
