@@ -82,7 +82,7 @@ const CVDocument = (props) => (
   <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.bar}>
-        <Image src={props.general.photoUrl} style={styles.photo} />
+        <Image source={props.general.photoUrl} style={styles.photo} />
         <View style={styles.barTab}>
           <Text style={styles.small}>Email</Text>
           <Text style={styles.text}>{props.general.email}</Text>

@@ -8,7 +8,10 @@ class View extends Component {
   render() {
     return (
       <>
-        <ViewTopBar updateStage={this.props.updateStage} />
+        <ViewTopBar
+          updateStage={this.props.updateStage}
+          data={this.props.data}
+        />
 
         <div className="wrapper large view">
           <ViewBar data={this.props.data.general} />
