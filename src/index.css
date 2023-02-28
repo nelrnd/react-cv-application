@@ -1,0 +1,31 @@
+:root {
+  --grey-dk: #414141;
+  --grey-lt: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+}
+
+header,
+footer {
+  color: white;
+  text-align: center;
+  background-color: var(--grey-dk);
+  padding: 1rem;
+}
