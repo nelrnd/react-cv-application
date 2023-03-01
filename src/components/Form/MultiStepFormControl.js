@@ -9,13 +9,13 @@ function MultiStepFormControl({ step, maxStep, goNextStep, goPrevStep }) {
 
   return (
     <div className="form-control-bar">
-      <button className={step === 1 ? 'hidden' : ''} onClick={goPrevStep}>
+      <button className={step === 1 ? 'hidden' : 'second'} onClick={goPrevStep}>
         Go back
       </button>
 
       <div className="progress">{bars}</div>
 
-      <button onClick={goNextStep}>
+      <button className="main" onClick={goNextStep}>
         {step < maxStep ? 'Next step' : 'Submit'}
       </button>
     </div>

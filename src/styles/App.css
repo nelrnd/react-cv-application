@@ -42,3 +42,27 @@ main {
   gap: 1rem;
   padding: 1rem;
 }
+
+button {
+  padding: 12px;
+  min-width: 122px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+button.hidden {
+  visibility: hidden;
+}
+
+button.main {
+  color: white;
+  background-color: black;
+}
+
+button.second {
+  color: black;
+  background-color: var(--grey-lt);
+}

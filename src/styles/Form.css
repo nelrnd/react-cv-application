@@ -67,3 +67,26 @@
   font-size: 14px;
   color: #818181;
 }
+
+.form-control-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control-bar .progress {
+  display: flex;
+  gap: 16px;
+  list-style-type: none;
+}
+
+.form-control-bar .progress .bar {
+  width: 64px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #dcdcdc;
+}
+
+.form-control-bar .progress .bar.filled {
+  background-color: black;
+}

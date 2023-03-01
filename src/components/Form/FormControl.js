@@ -3,7 +3,9 @@ import React from 'react';
 function FormControl() {
   return (
     <div className="form-control-bar">
-      <button>Submit</button>
+      <button className="main" style={{ marginLeft: 'auto' }}>
+        Submit
+      </button>
     </div>
   );
 }
