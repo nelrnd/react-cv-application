@@ -16,6 +16,25 @@
   padding: 38px;
 }
 
+.preview-sidebar .photo-wrapper {
+  width: 100%;
+  margin-bottom: 38px;
+  aspect-ratio: 300 / 400;
+  background-color: #818181;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.preview-sidebar .photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.preview-sidebar-tab {
+  margin-bottom: 26px;
+}
+
 .preview-header {
   background-color: #3c4ce3;
   margin-top: 78px;
@@ -47,4 +66,14 @@
 .preview-main hr {
   border: solid 1px #f0f0f0;
   margin: 32px 0;
+}
+
+.preview p {
+  line-height: 150%;
+}
+
+.preview p.small {
+  color: #818181;
+  font-size: 12px;
+  margin-bottom: 6px;
 }
