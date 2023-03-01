@@ -12,6 +12,7 @@ function Education({ education, handleChange, add, remove }) {
           data={item}
           index={index}
           handleChange={handleChange}
+          remove={remove}
         />
       ))}
 

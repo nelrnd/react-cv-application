@@ -1,6 +1,7 @@
 import React from 'react';
+import UnitControl from './UnitControl';
 
-function EducationUnit({ data, index, handleChange }) {
+function EducationUnit({ data, index, handleChange, remove }) {
   return (
     <div className="form-unit">
       <div className="form-row">
@@ -26,15 +27,17 @@ function EducationUnit({ data, index, handleChange }) {
       </div>
 
       <div className="form-row">
-        <label htmlFor={'dateOfStudy'}>Date of study</label>
+        <label htmlFor={'dateOfStudy' + index}>Date of study</label>
         <input
           type="text"
-          id={'dateOfStudy'}
+          id={'dateOfStudy' + index}
           placeholder="2022 - 2023"
           value={data.dateOfStudy}
           onChange={(event) => handleChange(event, 'dateOfStudy', index)}
         />
       </div>
+
+      <UnitControl remove={remove} index={index} />
     </div>
   );
 }

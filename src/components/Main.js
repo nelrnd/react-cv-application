@@ -74,7 +74,7 @@ function Main() {
 
   function removeWork(index) {
     const workCopy = [...work];
-    work.splice(index, 1);
+    workCopy.splice(index, 1);
     setWork(workCopy);
   }
 

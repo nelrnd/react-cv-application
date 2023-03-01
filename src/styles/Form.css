@@ -15,14 +15,18 @@
   margin-bottom: 24px;
 }
 
+.form-unit {
+  margin-bottom: 40px;
+}
+
 .form-row {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .form-row label {
   display: block;
   margin-left: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .form-row label .details {

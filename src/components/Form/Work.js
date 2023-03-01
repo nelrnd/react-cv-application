@@ -12,6 +12,7 @@ function Work({ work, handleChange, add, remove }) {
           data={item}
           index={index}
           handleChange={handleChange}
+          remove={remove}
         />
       ))}
 
