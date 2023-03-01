@@ -1,6 +1,6 @@
 import React from 'react';
 
-function General({ general, handleGeneralChange, handlePhotoUpload }) {
+function General({ general, handleChange, handlePhotoUpload }) {
   return (
     <div className="form-section">
       <h2 className="form-section-heading">General</h2>
@@ -12,7 +12,7 @@ function General({ general, handleGeneralChange, handlePhotoUpload }) {
           id="fullName"
           placeholder="John Doe"
           value={general.fullName}
-          onChange={(event) => handleGeneralChange(event, 'fullName')}
+          onChange={(event) => handleChange(event, 'fullName')}
         />
       </div>
 
@@ -23,7 +23,7 @@ function General({ general, handleGeneralChange, handlePhotoUpload }) {
           id="jobTitle"
           placeholder="Web Developer"
           value={general.jobTitle}
-          onChange={(event) => handleGeneralChange(event, 'jobTitle')}
+          onChange={(event) => handleChange(event, 'jobTitle')}
         />
       </div>
 
@@ -34,7 +34,7 @@ function General({ general, handleGeneralChange, handlePhotoUpload }) {
           id="email"
           placeholder="johndoe@example.com"
           value={general.email}
-          onChange={(event) => handleGeneralChange(event, 'email')}
+          onChange={(event) => handleChange(event, 'email')}
         />
       </div>
 
@@ -45,7 +45,7 @@ function General({ general, handleGeneralChange, handlePhotoUpload }) {
           id="phoneNumber"
           placeholder="754-3010"
           value={general.phoneNumber}
-          onChange={(event) => handleGeneralChange(event, 'phoneNumber')}
+          onChange={(event) => handleChange(event, 'phoneNumber')}
         />
       </div>
 
@@ -56,7 +56,7 @@ function General({ general, handleGeneralChange, handlePhotoUpload }) {
           id="location"
           placeholder="New York, USA"
           value={general.location}
-          onChange={(event) => handleGeneralChange(event, 'location')}
+          onChange={(event) => handleChange(event, 'location')}
         />
       </div>
 
@@ -67,15 +67,20 @@ function General({ general, handleGeneralChange, handlePhotoUpload }) {
           placeholder="A few sentences about you"
           rows="3"
           value={general.description}
-          onChange={(event) => handleGeneralChange(event, 'description')}
+          onChange={(event) => handleChange(event, 'description')}
         />
       </div>
 
       <div className="form-row">
         <label htmlFor="photo">Photo</label>
-        <input type="file" accept="image/*" id="photo" />
+        <input
+          type="file"
+          accept="image/*"
+          id="photo"
+          onChange={handlePhotoUpload}
+        />
         <label htmlFor="photo">Browse...</label>
-        <span>{general.photoName}</span>
+        <span>{general.photoTitle}</span>
       </div>
     </div>
   );
