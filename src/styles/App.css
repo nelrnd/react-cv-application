@@ -70,3 +70,14 @@ button.second {
 button:hover {
   opacity: 0.75;
 }
+
+button.center {
+  display: block;
+  margin: auto;
+}
+
+button.outline {
+  border: solid 1px #f0f0f0;
+  background-color: white;
+  width: min(240px, 100%);
+}

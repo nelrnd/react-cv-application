@@ -13,6 +13,10 @@ function Form({
   handleEducationChange,
   handleWorkChange,
   handlePhotoUpload,
+  addEducation,
+  addWork,
+  removeEducation,
+  removeWork,
 }) {
   return (
     <div className="form">
@@ -21,8 +25,18 @@ function Form({
         handleChange={handleGeneralChange}
         handlePhotoUpload={handlePhotoUpload}
       />
-      <Education education={education} handleChange={handleEducationChange} />
-      <Work work={work} handleChange={handleWorkChange} />
+      <Education
+        education={education}
+        handleChange={handleEducationChange}
+        add={addEducation}
+        remove={removeEducation}
+      />
+      <Work
+        work={work}
+        handleChange={handleWorkChange}
+        add={addWork}
+        remove={removeWork}
+      />
       <FormControl />
     </div>
   );

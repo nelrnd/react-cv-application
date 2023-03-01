@@ -1,7 +1,7 @@
 import React from 'react';
 import WorkUnit from './WorkUnit';
 
-function Work({ work, handleChange }) {
+function Work({ work, handleChange, add, remove }) {
   return (
     <div className="form-section">
       <h2 className="form-section-heading">Work experience</h2>
@@ -14,6 +14,10 @@ function Work({ work, handleChange }) {
           handleChange={handleChange}
         />
       ))}
+
+      <button className="center outline" onClick={add}>
+        Add new
+      </button>
     </div>
   );
 }

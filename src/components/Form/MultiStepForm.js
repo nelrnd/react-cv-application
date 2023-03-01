@@ -13,6 +13,10 @@ function MultiStepForm({
   handleEducationChange,
   handleWorkChange,
   handlePhotoUpload,
+  addEducation,
+  addWork,
+  removeEducation,
+  removeWork,
 }) {
   const [step, setStep] = useState(1);
 
@@ -34,9 +38,21 @@ function MultiStepForm({
         />
       )}
       {step === 2 && (
-        <Education education={education} handleChange={handleEducationChange} />
+        <Education
+          education={education}
+          handleChange={handleEducationChange}
+          add={addEducation}
+          remove={removeEducation}
+        />
       )}
-      {step === 3 && <Work work={work} handleChange={handleWorkChange} />}
+      {step === 3 && (
+        <Work
+          work={work}
+          handleChange={handleWorkChange}
+          add={addWork}
+          remove={removeWork}
+        />
+      )}
       <MultiStepFormControl
         step={step}
         maxStep={3}
