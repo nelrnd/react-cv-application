@@ -16,6 +16,14 @@ function MultiStepForm({
 }) {
   const [step, setStep] = useState(1);
 
+  function goNextStep() {
+    setStep(step + 1);
+  }
+
+  function goPrevStep() {
+    setStep(step - 1);
+  }
+
   return (
     <div className="form">
       {step === 1 && (
@@ -29,7 +37,12 @@ function MultiStepForm({
         <Education education={education} handleChange={handleEducationChange} />
       )}
       {step === 3 && <Work work={work} handleChange={handleWorkChange} />}
-      <MultiStepFormControl step={step} maxStep={3} />
+      <MultiStepFormControl
+        step={step}
+        maxStep={3}
+        goNextStep={goNextStep}
+        goPrevStep={goPrevStep}
+      />
     </div>
   );
 }
