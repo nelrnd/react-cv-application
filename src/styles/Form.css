@@ -19,6 +19,11 @@
   margin-bottom: 40px;
 }
 
+.form-unit .control {
+  display: flex;
+  gap: 12px;
+}
+
 .form-row {
   margin-bottom: 18px;
 }

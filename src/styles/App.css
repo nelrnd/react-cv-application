@@ -81,3 +81,9 @@ button.outline {
   background-color: white;
   width: min(240px, 100%);
 }
+
+button.small {
+  font-size: 14px;
+  padding: 10px 14px;
+  min-width: unset;
+}
