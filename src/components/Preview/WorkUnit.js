@@ -5,9 +5,13 @@ function WorkUnit({ data }) {
     <div className="unit">
       <p className="small">{data.dateOfWork}</p>
       <p>
-        <strong>{data.companyName}</strong>
+        {data.positionTitle} at <strong>{data.companyName}</strong>
       </p>
-      <p>{data.jobTitle}</p>
+      <ul>
+        {data.mainTasks.split(',').map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }

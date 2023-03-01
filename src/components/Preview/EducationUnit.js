@@ -5,8 +5,9 @@ function EducationUnit({ data }) {
     <div className="unit">
       <p className="small">{data.dateOfStudy}</p>
       <p>
-        {data.titleOfStudy} at <strong>{data.companyName}</strong>
+        <strong>{data.schoolName}</strong>
       </p>
+      <p>{data.titleOfStudy}</p>
     </div>
   );
 }
