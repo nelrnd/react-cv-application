@@ -58,6 +58,26 @@ function Main() {
     }
   }
 
+  function addEducation() {
+    setEducation([...education, { ...educationModel }]);
+  }
+
+  function addWork() {
+    setWork([...work, { ...workModel }]);
+  }
+
+  function removeEducation(index) {
+    const educationCopy = [...education];
+    educationCopy.splice(index, 1);
+    setEducation(educationCopy);
+  }
+
+  function removeWork(index) {
+    const workCopy = [...work];
+    work.splice(index, 1);
+    setWork(workCopy);
+  }
+
   return (
     <main>
       <MultiStepForm
@@ -68,6 +88,10 @@ function Main() {
         handleEducationChange={handleEducationChange}
         handleWorkChange={handleWorkChange}
         handlePhotoUpload={handlePhotoUpload}
+        addEducation={addEducation}
+        addWork={addWork}
+        removeEducation={removeEducation}
+        removeWork={removeWork}
       />
       <Form
         general={general}
@@ -77,6 +101,10 @@ function Main() {
         handleEducationChange={handleEducationChange}
         handleWorkChange={handleWorkChange}
         handlePhotoUpload={handlePhotoUpload}
+        addEducation={addEducation}
+        addWork={addWork}
+        removeEducation={removeEducation}
+        removeWork={removeWork}
       />
       <Preview general={general} education={education} work={work} />
     </main>
