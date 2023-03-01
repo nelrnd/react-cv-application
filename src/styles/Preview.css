@@ -58,6 +58,10 @@
   padding: 38px;
 }
 
+.preview-main-section .unit {
+  margin-bottom: 20px;
+}
+
 .preview-main h3 {
   font-size: 20px;
   margin-bottom: 20px;
@@ -77,7 +81,7 @@
 .preview p.small {
   color: #818181;
   font-size: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
 .preview ul {
