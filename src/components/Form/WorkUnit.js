@@ -1,7 +1,7 @@
 import React from 'react';
 import UnitControl from './UnitControl';
 
-function WorkUnit({ data, index, handleChange, remove }) {
+function WorkUnit({ data, index, handleChange, remove, position }) {
   return (
     <div className="form-unit">
       <div className="form-row">
@@ -51,7 +51,7 @@ function WorkUnit({ data, index, handleChange, remove }) {
         />
       </div>
 
-      <UnitControl remove={remove} index={index} />
+      <UnitControl remove={remove} position={position} index={index} />
     </div>
   );
 }

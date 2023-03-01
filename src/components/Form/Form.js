@@ -17,6 +17,8 @@ function Form({
   addWork,
   removeEducation,
   removeWork,
+  positionEducation,
+  positionWork,
 }) {
   return (
     <div className="form">
@@ -30,12 +32,14 @@ function Form({
         handleChange={handleEducationChange}
         add={addEducation}
         remove={removeEducation}
+        position={positionEducation}
       />
       <Work
         work={work}
         handleChange={handleWorkChange}
         add={addWork}
         remove={removeWork}
+        position={positionWork}
       />
       <FormControl />
     </div>

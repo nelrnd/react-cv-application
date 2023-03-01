@@ -1,7 +1,7 @@
 import React from 'react';
 import UnitControl from './UnitControl';
 
-function EducationUnit({ data, index, handleChange, remove }) {
+function EducationUnit({ data, index, handleChange, remove, position }) {
   return (
     <div className="form-unit">
       <div className="form-row">
@@ -37,7 +37,7 @@ function EducationUnit({ data, index, handleChange, remove }) {
         />
       </div>
 
-      <UnitControl remove={remove} index={index} />
+      <UnitControl remove={remove} index={index} position={position} />
     </div>
   );
 }

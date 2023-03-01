@@ -1,7 +1,7 @@
 import React from 'react';
 import EducationUnit from './EducationUnit';
 
-function Education({ education, handleChange, add, remove }) {
+function Education({ education, handleChange, add, remove, position }) {
   return (
     <div className="form-section">
       <h2 className="form-section-heading">Education</h2>
@@ -13,6 +13,7 @@ function Education({ education, handleChange, add, remove }) {
           index={index}
           handleChange={handleChange}
           remove={remove}
+          position={position}
         />
       ))}
 

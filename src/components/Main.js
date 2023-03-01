@@ -78,6 +78,20 @@ function Main() {
     setWork(workCopy);
   }
 
+  function positionEducation(index, newIndex) {
+    const educationCopy = [...education];
+    const item = educationCopy.splice(index, 1)[0];
+    educationCopy.splice(newIndex, 0, item);
+    setEducation(educationCopy);
+  }
+
+  function positionWork(index, newIndex) {
+    const workCopy = [...work];
+    const item = workCopy.splice(index, 1)[0];
+    workCopy.splice(newIndex, 0, item);
+    setWork(workCopy);
+  }
+
   return (
     <main>
       <MultiStepForm
@@ -92,6 +106,8 @@ function Main() {
         addWork={addWork}
         removeEducation={removeEducation}
         removeWork={removeWork}
+        positionEducation={positionEducation}
+        positionWork={positionWork}
       />
       <Form
         general={general}
@@ -105,6 +121,8 @@ function Main() {
         addWork={addWork}
         removeEducation={removeEducation}
         removeWork={removeWork}
+        positionEducation={positionEducation}
+        positionWork={positionWork}
       />
       <Preview general={general} education={education} work={work} />
     </main>

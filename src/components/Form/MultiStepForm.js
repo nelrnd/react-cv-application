@@ -17,6 +17,8 @@ function MultiStepForm({
   addWork,
   removeEducation,
   removeWork,
+  positionEducation,
+  positionWork,
 }) {
   const [step, setStep] = useState(1);
 
@@ -43,6 +45,7 @@ function MultiStepForm({
           handleChange={handleEducationChange}
           add={addEducation}
           remove={removeEducation}
+          position={positionEducation}
         />
       )}
       {step === 3 && (
@@ -51,6 +54,7 @@ function MultiStepForm({
           handleChange={handleWorkChange}
           add={addWork}
           remove={removeWork}
+          position={positionWork}
         />
       )}
       <MultiStepFormControl

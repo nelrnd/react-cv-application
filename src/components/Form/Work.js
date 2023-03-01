@@ -1,7 +1,7 @@
 import React from 'react';
 import WorkUnit from './WorkUnit';
 
-function Work({ work, handleChange, add, remove }) {
+function Work({ work, handleChange, add, remove, position }) {
   return (
     <div className="form-section">
       <h2 className="form-section-heading">Work experience</h2>
@@ -13,6 +13,7 @@ function Work({ work, handleChange, add, remove }) {
           index={index}
           handleChange={handleChange}
           remove={remove}
+          position={position}
         />
       ))}
 
