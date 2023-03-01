@@ -64,7 +64,7 @@ function Main() {
         general={general}
         education={education}
         work={work}
-        handleGeneralChange={handleEducationChange}
+        handleGeneralChange={handleGeneralChange}
         handleEducationChange={handleEducationChange}
         handleWorkChange={handleWorkChange}
         handlePhotoUpload={handlePhotoUpload}

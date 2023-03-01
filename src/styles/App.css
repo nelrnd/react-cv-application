@@ -66,3 +66,7 @@ button.second {
   color: black;
   background-color: var(--grey-lt);
 }
+
+button:hover {
+  opacity: 0.75;
+}
