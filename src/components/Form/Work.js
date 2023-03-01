@@ -2,8 +2,8 @@ import React from 'react';
 
 function Work() {
   return (
-    <div>
-      <h3>Work</h3>
+    <div className="form-section">
+      <h2 className="form-section-heading">Work experience</h2>
     </div>
   );
 }

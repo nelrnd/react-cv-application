@@ -1,0 +1,61 @@
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section-heading {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.form-row {
+  margin-bottom: 24px;
+}
+
+.form-row label {
+  display: block;
+  margin-left: 4px;
+  margin-bottom: 8px;
+}
+
+.form-row label .details {
+  color: #aaaaaa;
+}
+
+.form-row input,
+.form-row textarea {
+  display: block;
+  width: 100%;
+  font-size: 100%;
+  padding: 12px;
+  border: solid 2px #dcdcdc;
+  border-radius: 4px;
+}
+
+.form-row textarea {
+  resize: none;
+  line-height: 150%;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.form-row input[type='file'] {
+  display: none;
+}
+
+.form-row input[type='file'] + label {
+  padding: 12px;
+  margin-left: unset;
+  margin-right: 14px;
+  border: solid 2px #dcdcdc;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.form-row input[type='file'] + label + span {
+  font-size: 14px;
+  color: #818181;
+}
