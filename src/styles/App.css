@@ -1,6 +1,7 @@
 :root {
   --grey-dk: #414141;
   --grey-lt: #f0f0f0;
+  --main: #3c4ce3;
 }
 
 * {
@@ -59,7 +60,7 @@ button.hidden {
 
 button.main {
   color: white;
-  background-color: black;
+  background-color: var(--main);
 }
 
 button.second {
