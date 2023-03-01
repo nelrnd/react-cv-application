@@ -14,7 +14,7 @@ function Form({
   handlePhotoUpload,
 }) {
   return (
-    <div className="card">
+    <div className="form">
       <General
         general={general}
         handleChange={handleGeneralChange}

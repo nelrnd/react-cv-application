@@ -1,0 +1,50 @@
+.preview {
+  background-color: white;
+  width: min(100%, 957px);
+  aspect-ratio: 1 / 1.414;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+}
+
+.preview-sidebar {
+  grid-row: 1 / span 2;
+  background-color: #edeef3;
+  padding: 38px;
+}
+
+.preview-header {
+  background-color: #3c4ce3;
+  margin-top: 78px;
+  padding: 38px;
+}
+
+.preview-header h1 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+
+.preview-header h2 {
+  color: #a4abeb;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.preview-main {
+  margin-top: 64px;
+  padding: 38px;
+}
+
+.preview-main h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.preview-main hr {
+  border: solid 1px #f0f0f0;
+  margin: 32px 0;
+}

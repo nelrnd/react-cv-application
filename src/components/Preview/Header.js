@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Header() {
+function Header({ general }) {
   return (
-    <div>
-      <h2>Header</h2>
+    <div className="preview-header">
+      <h1>{general.fullName}</h1>
+      <h2>{general.jobTitle}</h2>
     </div>
   );
 }
