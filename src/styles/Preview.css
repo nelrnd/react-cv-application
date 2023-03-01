@@ -87,3 +87,14 @@
 .preview ul {
   padding-left: 20px;
 }
+
+.preview-control-bar {
+  background-color: white;
+  width: min(100%, 957px);
+  padding: 16px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+
+  display: flex;
+  justify-content: space-between;
+}
