@@ -19,6 +19,7 @@ function MultiStepForm({
   removeWork,
   positionEducation,
   positionWork,
+  setStage,
 }) {
   const [step, setStep] = useState(1);
 
@@ -62,6 +63,7 @@ function MultiStepForm({
         maxStep={3}
         goNextStep={goNextStep}
         goPrevStep={goPrevStep}
+        setStage={setStage}
       />
     </div>
   );

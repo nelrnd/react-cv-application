@@ -19,6 +19,7 @@ function Form({
   removeWork,
   positionEducation,
   positionWork,
+  setStage,
 }) {
   return (
     <div className="form">
@@ -41,7 +42,7 @@ function Form({
         remove={removeWork}
         position={positionWork}
       />
-      <FormControl />
+      <FormControl setStage={setStage} />
     </div>
   );
 }

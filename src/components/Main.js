@@ -94,37 +94,50 @@ function Main() {
 
   return (
     <main>
-      <MultiStepForm
-        general={general}
-        education={education}
-        work={work}
-        handleGeneralChange={handleGeneralChange}
-        handleEducationChange={handleEducationChange}
-        handleWorkChange={handleWorkChange}
-        handlePhotoUpload={handlePhotoUpload}
-        addEducation={addEducation}
-        addWork={addWork}
-        removeEducation={removeEducation}
-        removeWork={removeWork}
-        positionEducation={positionEducation}
-        positionWork={positionWork}
-      />
-      <Form
-        general={general}
-        education={education}
-        work={work}
-        handleGeneralChange={handleGeneralChange}
-        handleEducationChange={handleEducationChange}
-        handleWorkChange={handleWorkChange}
-        handlePhotoUpload={handlePhotoUpload}
-        addEducation={addEducation}
-        addWork={addWork}
-        removeEducation={removeEducation}
-        removeWork={removeWork}
-        positionEducation={positionEducation}
-        positionWork={positionWork}
-      />
-      <Preview general={general} education={education} work={work} />
+      {stage === 1 && (
+        <MultiStepForm
+          general={general}
+          education={education}
+          work={work}
+          handleGeneralChange={handleGeneralChange}
+          handleEducationChange={handleEducationChange}
+          handleWorkChange={handleWorkChange}
+          handlePhotoUpload={handlePhotoUpload}
+          addEducation={addEducation}
+          addWork={addWork}
+          removeEducation={removeEducation}
+          removeWork={removeWork}
+          positionEducation={positionEducation}
+          positionWork={positionWork}
+          setStage={setStage}
+        />
+      )}
+      {stage === 2 && (
+        <Preview
+          general={general}
+          education={education}
+          work={work}
+          setStage={setStage}
+        />
+      )}
+      {stage === 3 && (
+        <Form
+          general={general}
+          education={education}
+          work={work}
+          handleGeneralChange={handleGeneralChange}
+          handleEducationChange={handleEducationChange}
+          handleWorkChange={handleWorkChange}
+          handlePhotoUpload={handlePhotoUpload}
+          addEducation={addEducation}
+          addWork={addWork}
+          removeEducation={removeEducation}
+          removeWork={removeWork}
+          positionEducation={positionEducation}
+          positionWork={positionWork}
+          setStage={setStage}
+        />
+      )}
     </main>
   );
 }

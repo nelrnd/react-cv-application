@@ -1,6 +1,12 @@
 import React from 'react';
 
-function MultiStepFormControl({ step, maxStep, goNextStep, goPrevStep }) {
+function MultiStepFormControl({
+  step,
+  maxStep,
+  goNextStep,
+  goPrevStep,
+  setStage,
+}) {
   const bars = [];
 
   for (let i = 1; i <= maxStep; i++) {
@@ -15,7 +21,10 @@ function MultiStepFormControl({ step, maxStep, goNextStep, goPrevStep }) {
 
       <div className="progress">{bars}</div>
 
-      <button className="main" onClick={goNextStep}>
+      <button
+        className="main"
+        onClick={step < maxStep ? goNextStep : () => setStage(2)}
+      >
         {step < maxStep ? 'Next step' : 'Submit'}
       </button>
     </div>

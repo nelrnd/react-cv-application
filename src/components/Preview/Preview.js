@@ -4,7 +4,7 @@ import Header from './Header';
 import Main from './Main';
 import '../../styles/Preview.css';
 
-function Preview({ general, education, work }) {
+function Preview({ general, education, work, setStage }) {
   return (
     <div className="preview">
       <Sidebar general={general} />
