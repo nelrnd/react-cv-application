@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Form from './Form/Form';
+import MultiStepForm from './Form/MultiStepForm';
 import Preview from './Preview/Preview';
 
 const educationModel = {
@@ -59,6 +60,15 @@ function Main() {
 
   return (
     <main>
+      <MultiStepForm
+        general={general}
+        education={education}
+        work={work}
+        handleGeneralChange={handleEducationChange}
+        handleEducationChange={handleEducationChange}
+        handleWorkChange={handleWorkChange}
+        handlePhotoUpload={handlePhotoUpload}
+      />
       <Form
         general={general}
         education={education}

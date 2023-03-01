@@ -2,6 +2,7 @@ import React from 'react';
 import General from './General';
 import Education from './Education';
 import Work from './Work';
+import FormControl from './FormControl';
 import '../../styles/Form.css';
 
 function Form({
@@ -22,6 +23,7 @@ function Form({
       />
       <Education education={education} handleChange={handleEducationChange} />
       <Work work={work} handleChange={handleWorkChange} />
+      <FormControl />
     </div>
   );
 }
