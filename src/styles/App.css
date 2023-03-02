@@ -35,6 +35,10 @@ footer {
   padding: 1rem;
 }
 
+footer a {
+  color: white;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -87,4 +91,11 @@ button.small {
   font-size: 14px;
   padding: 10px 14px;
   min-width: unset;
+}
+
+/* TO BE REMOVED */
+
+.pdf-viewer {
+  width: 1200px;
+  height: 1200px;
 }

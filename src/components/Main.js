@@ -3,6 +3,9 @@ import Form from './Form/Form';
 import MultiStepForm from './Form/MultiStepForm';
 import Preview from './Preview/Preview';
 
+import CVDocument from './CVDocument';
+import { PDFViewer } from '@react-pdf/renderer';
+
 const educationModel = {
   schoolName: '',
   titleOfStudy: '',
@@ -138,6 +141,10 @@ function Main() {
           setStage={setStage}
         />
       )}
+
+      <PDFViewer className="pdf-viewer">
+        <CVDocument general={general} education={education} work={work} />
+      </PDFViewer>
     </main>
   );
 }
