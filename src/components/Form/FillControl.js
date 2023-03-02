@@ -57,7 +57,6 @@ const filledWork = [
 // Component to handle pre-filling a clearing form inputs
 
 function FillControl({
-  general,
   setGeneral,
   setEducation,
   setWork,

@@ -22,13 +22,13 @@ const filledState = {
     fullName: 'John Doe',
     jobTitle: 'Web Developer',
     email: 'johndoe@example.com',
-    phone: '754-3010',
+    phoneNumber: '754-3010',
     location: 'New York, USA',
-    profile:
+    description:
       'I am a skilled and dedicated web developer with a passion for creating innovative and engaging digital experiences. With several years of experience in both front-end and back-end development, I am well-versed in a variety of programming languages and technologies. I am committed to staying up-to-date with the latest industry trends and best practices, and I am always seeking new challenges to help me grow as a developer.',
     photoUrl:
       'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-    photoName: 'random',
+    photoTitle: 'my-photo.jpg',
   },
   education: [
     {
