@@ -11,7 +11,7 @@ import {
 
 import InterRegular from '../assets/Inter-Regular.ttf';
 import InterSemiBold from '../assets/Inter-SemiBold.ttf';
-import DefaultPhoto from '../assets/default-photo.png';
+import DefaultPhoto from '../assets/default-photo.jpg';
 
 // Register font
 Font.register({

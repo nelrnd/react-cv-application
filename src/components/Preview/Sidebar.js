@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultPhoto from '../../assets/default-photo.png';
+import DefaultPhoto from '../../assets/default-photo.jpg';
 
 function Sidebar({ general }) {
   return (
