@@ -152,7 +152,7 @@ function CVDocument({ general, education, work }) {
                     {item.positionTitle} at{' '}
                     <Text style={styles.textBold}>{item.companyName} </Text>
                   </Text>
-                  {item.mainTasks.split(',').length > 0 &&
+                  {item.mainTasks &&
                     item.mainTasks.split(',').map((item, index) => (
                       <Text key={index} style={styles.text}>
                         • {item}

@@ -8,9 +8,10 @@ function WorkUnit({ data }) {
         {data.positionTitle} at <strong>{data.companyName}</strong>
       </p>
       <ul>
-        {data.mainTasks.split(',').map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
+        {data.mainTasks &&
+          data.mainTasks
+            .split(',')
+            .map((item, index) => <li key={index}>{item}</li>)}
       </ul>
     </div>
   );
