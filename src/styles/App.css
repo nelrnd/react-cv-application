@@ -92,10 +92,3 @@ button.small {
   padding: 10px 14px;
   min-width: unset;
 }
-
-/* TO BE REMOVED */
-
-.pdf-viewer {
-  width: 1200px;
-  height: 1200px;
-}

@@ -8,7 +8,12 @@ import '../../styles/Preview.css';
 function Preview({ general, education, work, setStage }) {
   return (
     <>
-      <PreviewControl setStage={setStage} />
+      <PreviewControl
+        setStage={setStage}
+        general={general}
+        education={education}
+        work={work}
+      />
       <div className="preview">
         <Sidebar general={general} />
         <Header general={general} />
