@@ -35,6 +35,14 @@ footer {
   padding: 1rem;
 }
 
+footer img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  position: relative;
+  bottom: 2px;
+}
+
 footer a {
   color: white;
 }
