@@ -11,6 +11,7 @@ import {
 
 import InterRegular from '../assets/Inter-Regular.ttf';
 import InterSemiBold from '../assets/Inter-SemiBold.ttf';
+import DefaultPhoto from '../assets/default-photo.png';
 
 // Register font
 Font.register({
@@ -99,7 +100,7 @@ function CVDocument({ general, education, work }) {
       <Page size="A4" style={styles.page}>
         <View style={styles.sidebar}>
           <Image
-            source={general.photoUrl || '../assets/photo-default.jpeg'}
+            source={general.photoUrl || DefaultPhoto}
             style={styles.photo}
           />
           <View style={styles.sidebarTab}>
@@ -152,12 +153,13 @@ function CVDocument({ general, education, work }) {
                     {item.positionTitle} at{' '}
                     <Text style={styles.textBold}>{item.companyName} </Text>
                   </Text>
-                  {item.mainTasks &&
-                    item.mainTasks.split(',').map((item, index) => (
-                      <Text key={index} style={styles.text}>
-                        • {item}
-                      </Text>
-                    ))}
+                  {item.mainTasks
+                    ? item.mainTasks.split(',').map((item, index) => (
+                        <Text key={index} style={styles.text}>
+                          • {item}
+                        </Text>
+                      ))
+                    : null}
                 </View>
               ))}
             </View>

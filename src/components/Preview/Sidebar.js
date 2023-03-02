@@ -1,10 +1,11 @@
 import React from 'react';
+import DefaultPhoto from '../../assets/default-photo.png';
 
 function Sidebar({ general }) {
   return (
     <div className="preview-sidebar">
       <div className="photo-wrapper">
-        <img src={general.photoUrl} alt="Profile" />
+        <img src={general.photoUrl || DefaultPhoto} alt="Profile" />
       </div>
 
       <div className="preview-sidebar-tab">
