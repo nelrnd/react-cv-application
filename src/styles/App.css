@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/Inter-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/Inter-SemiBold.ttf');
+  font-weight: 600;
+}
+
 :root {
   --grey-dk: #414141;
   --grey-lt: #f0f0f0;
@@ -8,7 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 html,
