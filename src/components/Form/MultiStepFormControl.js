@@ -1,4 +1,6 @@
 import React from 'react';
+import { IconContext } from 'react-icons';
+import { HiChevronRight, HiChevronLeft } from 'react-icons/hi2';
 
 function MultiStepFormControl({
   step,
@@ -14,20 +16,31 @@ function MultiStepFormControl({
   }
 
   return (
-    <div className="form-control-bar">
-      <button className={step === 1 ? 'hidden' : 'second'} onClick={goPrevStep}>
-        Go back
-      </button>
+    <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+      <div className="form-control-bar">
+        <button
+          className={step === 1 ? 'hidden' : 'second'}
+          onClick={goPrevStep}
+        >
+          <HiChevronLeft /> Go back
+        </button>
 
-      <div className="progress">{bars}</div>
+        <div className="progress">{bars}</div>
 
-      <button
-        className="main"
-        onClick={step < maxStep ? goNextStep : () => setStage(2)}
-      >
-        {step < maxStep ? 'Next step' : 'Submit'}
-      </button>
-    </div>
+        <button
+          className="main"
+          onClick={step < maxStep ? goNextStep : () => setStage(2)}
+        >
+          {step < maxStep ? (
+            <>
+              Next <HiChevronRight />
+            </>
+          ) : (
+            'Submit'
+          )}
+        </button>
+      </div>
+    </IconContext.Provider>
   );
 }
 
