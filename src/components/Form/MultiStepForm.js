@@ -9,16 +9,11 @@ function MultiStepForm({
   general,
   education,
   work,
-  handleGeneralChange,
-  handleEducationChange,
-  handleWorkChange,
-  handlePhotoUpload,
-  addEducation,
-  addWork,
-  removeEducation,
-  removeWork,
-  positionEducation,
-  positionWork,
+  setGeneral,
+  setEducation,
+  setWork,
+  educationModel,
+  workModel,
   setStage,
 }) {
   const [step, setStep] = useState(1);
@@ -33,30 +28,16 @@ function MultiStepForm({
 
   return (
     <div className="form">
-      {step === 1 && (
-        <General
-          general={general}
-          handleChange={handleGeneralChange}
-          handlePhotoUpload={handlePhotoUpload}
-        />
-      )}
+      {step === 1 && <General general={general} setGeneral={setGeneral} />}
       {step === 2 && (
         <Education
           education={education}
-          handleChange={handleEducationChange}
-          add={addEducation}
-          remove={removeEducation}
-          position={positionEducation}
+          setEducation={setEducation}
+          educationModel={educationModel}
         />
       )}
       {step === 3 && (
-        <Work
-          work={work}
-          handleChange={handleWorkChange}
-          add={addWork}
-          remove={removeWork}
-          position={positionWork}
-        />
+        <Work work={work} setWork={setWork} workModel={workModel} />
       )}
       <MultiStepFormControl
         step={step}

@@ -1,6 +1,22 @@
 import React from 'react';
 
-function General({ general, handleChange, handlePhotoUpload }) {
+function General({ general, setGeneral }) {
+  function handleChange(event, prop) {
+    const generalCopy = { ...general };
+    generalCopy[prop] = event.target.value;
+    setGeneral(generalCopy);
+  }
+
+  function handlePhotoUpload(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const generalCopy = { ...general };
+      generalCopy.photoUrl = URL.createObjectURL(file);
+      generalCopy.photoTitle = file.name;
+      setGeneral(generalCopy);
+    }
+  }
+
   return (
     <div className="form-section">
       <h2 className="form-section-heading">General</h2>

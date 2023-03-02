@@ -9,39 +9,22 @@ function Form({
   general,
   education,
   work,
-  handleGeneralChange,
-  handleEducationChange,
-  handleWorkChange,
-  handlePhotoUpload,
-  addEducation,
-  addWork,
-  removeEducation,
-  removeWork,
-  positionEducation,
-  positionWork,
+  setGeneral,
+  setEducation,
+  setWork,
+  educationModel,
+  workModel,
   setStage,
 }) {
   return (
     <div className="form">
-      <General
-        general={general}
-        handleChange={handleGeneralChange}
-        handlePhotoUpload={handlePhotoUpload}
-      />
+      <General general={general} setGeneral={setGeneral} />
       <Education
         education={education}
-        handleChange={handleEducationChange}
-        add={addEducation}
-        remove={removeEducation}
-        position={positionEducation}
+        setEducation={setEducation}
+        educationModel={educationModel}
       />
-      <Work
-        work={work}
-        handleChange={handleWorkChange}
-        add={addWork}
-        remove={removeWork}
-        position={positionWork}
-      />
+      <Work work={work} setWork={setWork} workModel={workModel} />
       <FormControl setStage={setStage} />
     </div>
   );

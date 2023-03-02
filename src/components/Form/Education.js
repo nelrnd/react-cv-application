@@ -1,7 +1,31 @@
 import React from 'react';
 import EducationUnit from './EducationUnit';
 
-function Education({ education, handleChange, add, remove, position }) {
+function Education({ education, setEducation, educationModel }) {
+  function handleChange(event, prop, index) {
+    const educationCopy = [...education];
+    educationCopy[index][prop] = event.target.value;
+    setEducation(educationCopy);
+  }
+
+  function add() {
+    setEducation([...education, { ...educationModel }]);
+  }
+
+  function remove(index) {
+    const educationCopy = [...education];
+    educationCopy.splice(index, 1);
+    setEducation(educationCopy);
+  }
+
+  function position(index, newIndex) {
+    if (index === 0 && newIndex < index) return;
+    const educationCopy = [...education];
+    const item = educationCopy.splice(index, 1)[0];
+    educationCopy.splice(newIndex, 0, item);
+    setEducation(educationCopy);
+  }
+
   return (
     <div className="form-section">
       <h2 className="form-section-heading">Education</h2>

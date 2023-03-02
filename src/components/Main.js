@@ -30,70 +30,6 @@ function Main() {
   const [work, setWork] = useState([{ ...workModel }]);
   const [stage, setStage] = useState(1);
 
-  function handleGeneralChange(event, prop) {
-    const generalCopy = { ...general };
-    generalCopy[prop] = event.target.value;
-    setGeneral(generalCopy);
-  }
-
-  function handleEducationChange(event, prop, index) {
-    const educationCopy = [...education];
-    educationCopy[index][prop] = event.target.value;
-    setEducation(educationCopy);
-  }
-
-  function handleWorkChange(event, prop, index) {
-    const workCopy = [...work];
-    workCopy[index][prop] = event.target.value;
-    setWork(workCopy);
-  }
-
-  function handlePhotoUpload(event) {
-    const file = event.target.files[0];
-    if (file) {
-      const generalCopy = { ...general };
-      generalCopy.photoUrl = URL.createObjectURL(file);
-      generalCopy.photoTitle = file.name;
-      setGeneral(generalCopy);
-    }
-  }
-
-  function addEducation() {
-    setEducation([...education, { ...educationModel }]);
-  }
-
-  function addWork() {
-    setWork([...work, { ...workModel }]);
-  }
-
-  function removeEducation(index) {
-    const educationCopy = [...education];
-    educationCopy.splice(index, 1);
-    setEducation(educationCopy);
-  }
-
-  function removeWork(index) {
-    const workCopy = [...work];
-    workCopy.splice(index, 1);
-    setWork(workCopy);
-  }
-
-  function positionEducation(index, newIndex) {
-    if (index === 0 && newIndex < index) return;
-    const educationCopy = [...education];
-    const item = educationCopy.splice(index, 1)[0];
-    educationCopy.splice(newIndex, 0, item);
-    setEducation(educationCopy);
-  }
-
-  function positionWork(index, newIndex) {
-    if (index === 0 && newIndex < index) return;
-    const workCopy = [...work];
-    const item = workCopy.splice(index, 1)[0];
-    workCopy.splice(newIndex, 0, item);
-    setWork(workCopy);
-  }
-
   return (
     <main>
       {stage === 1 && (
@@ -101,16 +37,11 @@ function Main() {
           general={general}
           education={education}
           work={work}
-          handleGeneralChange={handleGeneralChange}
-          handleEducationChange={handleEducationChange}
-          handleWorkChange={handleWorkChange}
-          handlePhotoUpload={handlePhotoUpload}
-          addEducation={addEducation}
-          addWork={addWork}
-          removeEducation={removeEducation}
-          removeWork={removeWork}
-          positionEducation={positionEducation}
-          positionWork={positionWork}
+          setGeneral={setGeneral}
+          setEducation={setEducation}
+          setWork={setWork}
+          educationModel={educationModel}
+          workModel={workModel}
           setStage={setStage}
         />
       )}
@@ -127,16 +58,11 @@ function Main() {
           general={general}
           education={education}
           work={work}
-          handleGeneralChange={handleGeneralChange}
-          handleEducationChange={handleEducationChange}
-          handleWorkChange={handleWorkChange}
-          handlePhotoUpload={handlePhotoUpload}
-          addEducation={addEducation}
-          addWork={addWork}
-          removeEducation={removeEducation}
-          removeWork={removeWork}
-          positionEducation={positionEducation}
-          positionWork={positionWork}
+          setGeneral={setGeneral}
+          setEducation={setEducation}
+          setWork={setWork}
+          educationModel={educationModel}
+          workModel={workModel}
           setStage={setStage}
         />
       )}
