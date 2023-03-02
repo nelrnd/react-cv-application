@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from './Form/Form';
 import MultiStepForm from './Form/MultiStepForm';
 import Preview from './Preview/Preview';
+import FillControl from './Form/FillControl';
 
 const educationModel = {
   schoolName: '',
@@ -33,17 +34,26 @@ function Main() {
   return (
     <main>
       {stage === 1 && (
-        <MultiStepForm
-          general={general}
-          education={education}
-          work={work}
-          setGeneral={setGeneral}
-          setEducation={setEducation}
-          setWork={setWork}
-          educationModel={educationModel}
-          workModel={workModel}
-          setStage={setStage}
-        />
+        <>
+          <FillControl
+            setGeneral={setGeneral}
+            setEducation={setEducation}
+            setWork={setWork}
+            educationModel={educationModel}
+            workModel={workModel}
+          />
+          <MultiStepForm
+            general={general}
+            education={education}
+            work={work}
+            setGeneral={setGeneral}
+            setEducation={setEducation}
+            setWork={setWork}
+            educationModel={educationModel}
+            workModel={workModel}
+            setStage={setStage}
+          />
+        </>
       )}
       {stage === 2 && (
         <Preview
@@ -54,17 +64,26 @@ function Main() {
         />
       )}
       {stage === 3 && (
-        <Form
-          general={general}
-          education={education}
-          work={work}
-          setGeneral={setGeneral}
-          setEducation={setEducation}
-          setWork={setWork}
-          educationModel={educationModel}
-          workModel={workModel}
-          setStage={setStage}
-        />
+        <>
+          <FillControl
+            setGeneral={setGeneral}
+            setEducation={setEducation}
+            setWork={setWork}
+            educationModel={educationModel}
+            workModel={workModel}
+          />
+          <Form
+            general={general}
+            education={education}
+            work={work}
+            setGeneral={setGeneral}
+            setEducation={setEducation}
+            setWork={setWork}
+            educationModel={educationModel}
+            workModel={workModel}
+            setStage={setStage}
+          />
+        </>
       )}
     </main>
   );

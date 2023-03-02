@@ -99,3 +99,8 @@
 .form-control-bar .progress .bar.filled {
   background-color: var(--main);
 }
+
+.fill-control-bar {
+  display: flex;
+  gap: 1rem;
+}
