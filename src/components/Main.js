@@ -79,6 +79,7 @@ function Main() {
   }
 
   function positionEducation(index, newIndex) {
+    if (index === 0 && newIndex < index) return;
     const educationCopy = [...education];
     const item = educationCopy.splice(index, 1)[0];
     educationCopy.splice(newIndex, 0, item);
@@ -86,6 +87,7 @@ function Main() {
   }
 
   function positionWork(index, newIndex) {
+    if (index === 0 && newIndex < index) return;
     const workCopy = [...work];
     const item = workCopy.splice(index, 1)[0];
     workCopy.splice(newIndex, 0, item);
