@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CVDocument from '../CVDocument';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import { IconContext } from 'react-icons';
@@ -7,7 +8,7 @@ import {
   HiOutlineDocumentArrowDown,
 } from 'react-icons/hi2';
 
-function PreviewControl({ setStage, general, education, work }) {
+function PreviewControl({ general, education, work }) {
   return (
     <IconContext.Provider
       value={{
@@ -16,9 +17,9 @@ function PreviewControl({ setStage, general, education, work }) {
       }}
     >
       <div className="preview-control-bar">
-        <button className="second" onClick={() => setStage(3)}>
+        <Link to="/edit" className="button second">
           <HiOutlinePencilSquare /> Edit
-        </button>
+        </Link>
 
         <button className="main">
           <PDFDownloadLink
