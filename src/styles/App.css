@@ -68,7 +68,8 @@ main {
   padding: 1rem;
 }
 
-button {
+button,
+.button {
   padding: 12px;
   min-width: 122px;
   border-radius: 4px;
@@ -76,23 +77,29 @@ button {
   border: none;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
-button.hidden {
+button.hidden,
+.button.hidden {
   visibility: hidden;
 }
 
-button.main {
+button.main,
+.button.main {
   color: white;
   background-color: var(--main);
 }
 
-button.second {
+button.second,
+.button.second {
   color: black;
   background-color: var(--grey-lt);
 }
 
-button:hover {
+button:hover,
+.button:hover {
   opacity: 0.75;
 }
 
