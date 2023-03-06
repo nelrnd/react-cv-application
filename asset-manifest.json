@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-cv-application/static/css/main.24f0d3c4.css",
-    "main.js": "/react-cv-application/static/js/main.23e3b396.js",
+    "main.css": "/react-cv-application/static/css/main.85fed864.css",
+    "main.js": "/react-cv-application/static/js/main.d23c7003.js",
     "static/media/Inter-SemiBold.ttf": "/react-cv-application/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
     "static/media/Inter-Regular.ttf": "/react-cv-application/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
     "static/media/default-photo.jpg": "/react-cv-application/static/media/default-photo.f6c397373870ef18c010.jpg",
     "static/media/github-icon.svg": "/react-cv-application/static/media/github-icon.8f167ef8b95eb47a2fd64d009157f2e5.svg",
     "index.html": "/react-cv-application/index.html",
-    "main.24f0d3c4.css.map": "/react-cv-application/static/css/main.24f0d3c4.css.map",
-    "main.23e3b396.js.map": "/react-cv-application/static/js/main.23e3b396.js.map"
+    "main.85fed864.css.map": "/react-cv-application/static/css/main.85fed864.css.map",
+    "main.d23c7003.js.map": "/react-cv-application/static/js/main.d23c7003.js.map"
   },
   "entrypoints": [
-    "static/css/main.24f0d3c4.css",
-    "static/js/main.23e3b396.js"
+    "static/css/main.85fed864.css",
+    "static/js/main.d23c7003.js"
   ]
 }
