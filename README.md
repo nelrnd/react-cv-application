@@ -7,3 +7,4 @@ Features:
 - Multi-step form
 - Photo upload
 - PDF download
+- React routing
