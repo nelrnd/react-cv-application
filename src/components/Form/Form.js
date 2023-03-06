@@ -14,7 +14,6 @@ function Form({
   setWork,
   educationModel,
   workModel,
-  setStage,
 }) {
   return (
     <div className="form">
@@ -25,7 +24,7 @@ function Form({
         educationModel={educationModel}
       />
       <Work work={work} setWork={setWork} workModel={workModel} />
-      <FormControl setStage={setStage} />
+      <FormControl />
     </div>
   );
 }

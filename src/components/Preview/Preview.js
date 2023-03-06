@@ -5,15 +5,10 @@ import Main from './Main';
 import PreviewControl from './PreviewControl';
 import '../../styles/Preview.css';
 
-function Preview({ general, education, work, setStage }) {
+function Preview({ general, education, work }) {
   return (
     <>
-      <PreviewControl
-        setStage={setStage}
-        general={general}
-        education={education}
-        work={work}
-      />
+      <PreviewControl general={general} education={education} work={work} />
       <div className="preview">
         <Sidebar general={general} />
         <Header general={general} />

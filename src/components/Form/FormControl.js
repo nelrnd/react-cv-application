@@ -1,15 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function FormControl({ setStage }) {
+function FormControl() {
   return (
     <div className="form-control-bar">
-      <button
-        className="main"
+      <Link
+        to="/preview"
+        className="button main"
         style={{ marginLeft: 'auto' }}
-        onClick={() => setStage(2)}
       >
         Submit
-      </button>
+      </Link>
     </div>
   );
 }
