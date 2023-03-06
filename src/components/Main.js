@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Form from './Form/Form';
 import MultiStepForm from './Form/MultiStepForm';
 import Preview from './Preview/Preview';
@@ -29,62 +30,67 @@ function Main() {
   });
   const [education, setEducation] = useState([{ ...educationModel }]);
   const [work, setWork] = useState([{ ...workModel }]);
-  const [stage, setStage] = useState(1);
 
   return (
     <main>
-      {stage === 1 && (
-        <>
-          <FillControl
-            setGeneral={setGeneral}
-            setEducation={setEducation}
-            setWork={setWork}
-            educationModel={educationModel}
-            workModel={workModel}
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <FillControl
+                  setGeneral={setGeneral}
+                  setEducation={setEducation}
+                  setWork={setWork}
+                  educationModel={educationModel}
+                  workModel={workModel}
+                />
+                <MultiStepForm
+                  general={general}
+                  education={education}
+                  work={work}
+                  setGeneral={setGeneral}
+                  setEducation={setEducation}
+                  setWork={setWork}
+                  educationModel={educationModel}
+                  workModel={workModel}
+                />
+              </>
+            }
           />
-          <MultiStepForm
-            general={general}
-            education={education}
-            work={work}
-            setGeneral={setGeneral}
-            setEducation={setEducation}
-            setWork={setWork}
-            educationModel={educationModel}
-            workModel={workModel}
-            setStage={setStage}
+          <Route
+            path="/preview"
+            element={
+              <Preview general={general} education={education} work={work} />
+            }
           />
-        </>
-      )}
-      {stage === 2 && (
-        <Preview
-          general={general}
-          education={education}
-          work={work}
-          setStage={setStage}
-        />
-      )}
-      {stage === 3 && (
-        <>
-          <FillControl
-            setGeneral={setGeneral}
-            setEducation={setEducation}
-            setWork={setWork}
-            educationModel={educationModel}
-            workModel={workModel}
+          <Route
+            path="/edit"
+            element={
+              <>
+                <FillControl
+                  setGeneral={setGeneral}
+                  setEducation={setEducation}
+                  setWork={setWork}
+                  educationModel={educationModel}
+                  workModel={workModel}
+                />
+                <Form
+                  general={general}
+                  education={education}
+                  work={work}
+                  setGeneral={setGeneral}
+                  setEducation={setEducation}
+                  setWork={setWork}
+                  educationModel={educationModel}
+                  workModel={workModel}
+                />
+              </>
+            }
           />
-          <Form
-            general={general}
-            education={education}
-            work={work}
-            setGeneral={setGeneral}
-            setEducation={setEducation}
-            setWork={setWork}
-            educationModel={educationModel}
-            workModel={workModel}
-            setStage={setStage}
-          />
-        </>
-      )}
+        </Routes>
+      </BrowserRouter>
     </main>
   );
 }
