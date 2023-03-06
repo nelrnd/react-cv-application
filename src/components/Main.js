@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Form from './Form/Form';
 import MultiStepForm from './Form/MultiStepForm';
 import Preview from './Preview/Preview';
@@ -33,7 +33,7 @@ function Main() {
 
   return (
     <main>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route
             path="/"
@@ -90,7 +90,7 @@ function Main() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </main>
   );
 }
